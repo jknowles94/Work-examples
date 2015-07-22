@@ -1,0 +1,257 @@
+// ----- Layout -----
+
+// Custom containers and columns
+.fullwidth, .fullwidth-sm, .fullwidth-lg, .fullwidth-np, .fullwidth-bg {
+	width: 100%;
+	@include clearfix();
+	clear: both;
+}
+.fullwidth-lg {
+	padding-top: 45px;
+	padding-bottom: 45px;
+}
+.fullwidth {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.fullwidth-sm {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.fullwidth-bg, .fullwidth-np {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.fullwidth-bg {
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+	.col-np {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.col-lp {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+
+// Background colours/patterns
+.bg-grey {
+	background-color: $color-grey-light;
+}
+.bg-black {
+	color: #fff;
+	background-color: #000;
+
+	a { color: #fff; }
+}
+
+
+
+
+// ----- Header -----
+.header {
+    background-color: $color-red;
+    padding:0;
+    position: relative;
+
+    .container {
+    	position: relative;
+    	overflow: hidden;
+    }
+
+    .logo {
+		margin:0 auto;
+		width: 110px;
+		display: block;
+	}
+
+	.logout {
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding:10px;
+		text-transform: uppercase;
+		@include rem(font-size, 12px);
+		width:95px;
+
+		a {
+			color: #fff;
+			background: url('../../images/guestpasses/logout.jpg') no-repeat 100%;
+  			padding-right:23px;
+  			border: 0;
+  			outline: 0;
+		}
+
+		img {
+			padding-left:4px;
+		}
+	}
+}
+
+.nav-primary {
+	display:block;
+	float:none;
+	margin:0 auto;
+	max-width:700px;
+	a:hover, a:focus, .active {
+		color: #fff;
+	}
+}
+
+
+
+// ----- Footer -----
+.footer-start img {
+	width:100%;
+	height:100%;
+}
+
+.footer {
+	@include rem(font-size, 12px);
+	background: $color-grey-dark;
+	color:#fff;
+	text-align:center;
+	text-transform:uppercase;
+
+	.partners {
+		margin: 0 auto;
+		max-width: 735px;
+
+		h3 {
+			img {
+				padding-bottom:3px;
+			}
+		}
+
+	}
+
+	.copyright {
+		@include rem(font-size, 11px);
+		text-transform: none;
+		font-family: 'Avenir', Arial;
+		letter-spacing: 1px;
+		color: #e5e5e5;
+	}
+
+	.nav-social {
+		margin-top: 25px;
+
+		a {
+			padding: 2px 4px;
+			margin-left: 10px;
+			@include rem(font-size, 20px);
+			color: #fff;
+		}
+
+		ul {
+			list-style-type: none;
+			padding:0;
+			margin: 0;
+			display: inline-block;
+
+			li {
+				display: inline-block!important;
+				padding:0;
+
+				&:first-child a {
+					margin-left: 0;
+				}
+			}
+
+		}
+	}
+
+	h3 {
+		@include rem(font-size, 13px);
+		letter-spacing: 6px;
+		@include rem(line-height, 20px);
+		font-family: 'Avenir', Arial;
+		font-weight: bold;
+	}
+
+	.footer-linebreak {
+		width:60px;
+		margin: 50px auto;
+		display: block;
+		height: 1px;
+		background-color: #464646;
+	}
+}
+
+	.nav-footer {
+
+		a { 			
+			padding: 2px;
+			margin-right: 10px;
+		}
+	}
+
+
+
+/* ----- XS ----- */
+/* 479px and down */
+@media (max-width: $screen-xs-custom-max) {  
+
+}
+
+/* 480px and up */
+@media (min-width: $screen-xs-custom-min) {  
+
+}
+
+/* 599px and down */
+@media (max-width: $screen-xsm-custom-max) {  
+
+}
+
+/* 600px and up */
+@media (min-width: $screen-xsm-custom-min) {  
+
+}
+
+/* 767px and down */
+@media (max-width: $screen-sm-custom-max) { 
+
+}
+
+
+/* ----- SM ----- */
+/* 768px and up */
+@media (min-width: $screen-sm-min) { 
+	.nav-mobile-toggle {
+		display: none;
+	}
+}
+
+/* 768px - 991px */
+@media (min-width: $screen-sm-custom-min) and (max-width: $screen-md-custom-max) { 
+
+}
+
+/* 991px and down */
+@media (max-width: $screen-md-custom-max) {  
+
+}
+
+
+/* ----- MD ----- */
+/* 992px and up */
+@media (min-width: $screen-md-custom-min) {  
+
+}
+
+/* 992px - 1999px */
+@media (min-width: $screen-md-custom-min) and (max-width: $screen-lg-custom-max) {  
+
+}
+
+
+/* ----- LG ----- */
+/* 1200px and up */
+@media (min-width: $screen-lg-custom-min) { 
+
+}
