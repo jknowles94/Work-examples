@@ -1,0 +1,40 @@
+figure.mod-figure{
+	position:relative;
+	margin-bottom: 15px;
+
+	img {
+		width:100%;
+	}
+	figcaption,
+	.figure-download{
+		font-family: $font-header-bold;
+		text-transform: uppercase;
+		font-size: 16px;
+		font-size: 1.6rem;
+		line-height: 1em;
+		padding:10px 20px;
+		display: block;
+	}
+	figcaption {
+		color: $color-grey-medium-light;
+		background: $color-grey-lighter;
+	}
+	.figure-download{
+		color: $color-red;
+		position: absolute;
+		bottom:0;
+		right:0;
+
+		&:before{
+			@include icon-download();
+			content: " ";
+			display: inline-block;
+			margin-right: 10px;
+			vertical-align: middle;
+		}
+
+		@media (max-width:$screen-xs-max){
+			position:static;
+		}
+	}
+}

@@ -1,0 +1,220 @@
+.living-labs-header {
+	text-align:center;
+	color:#fff;
+
+	.living-header {
+		margin: 0 auto;
+		max-width: 600px;
+	}
+
+	h1 {
+		font-size: 120px;
+		font-size: 12rem;
+		margin-bottom: 15px;
+	}
+
+	h2 {
+		font-size: 26px;
+		font-size: 2.6rem;
+		text-transform: uppercase;
+	}
+}
+
+.living-labs-copy {
+	h1 {
+		font-family: $font-header;
+		text-transform: uppercase;
+		font-size: 40px;
+		font-size:4rem;
+	}
+
+	p {
+		font-family: $font-paragraph;
+	}
+
+	.popular-questions {
+		border-top:3px solid #ed1c29;
+		border-bottom:3px solid #ed1c29;
+		padding: 20px 0;
+
+		h2 {
+			text-transform: uppercase;
+			font-family: $font-header-bold;
+			font-size: 26px;
+			font-size: 2.6rem;
+			margin-bottom: 15px;
+		}
+
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.living-labs-form {
+
+	.container {
+		padding-top: 0;
+	}
+
+	h2 {
+		background-color:$color-red;
+		text-align: center;
+		padding:10px 0;
+		color: #fff;
+		text-transform: uppercase;
+		margin-bottom: 0;
+	}
+
+	.red-point {
+		background:url('../../../assets/images/icon/triangle-down.png');
+		width:40px;
+		height: 10px;
+		margin:0 auto;
+	}
+
+	.living-form {
+		padding-top:40px;
+		padding-bottom:40px;
+		text-transform: uppercase;
+		font-family: $font-paragraph-bold;
+
+		label {
+			font-weight: normal;
+		}
+		label span {
+			text-transform: none;
+			color: #666666;
+			font-family: $font-paragraph;
+		}
+
+		.form-row {
+
+			div {
+				position:relative;
+
+				&:after {
+					display:block;
+				    position:absolute;
+				    content:'';
+				    right:0px;
+				    top:0px;
+				    height:2.5em;
+				    width:3em;
+				    margin:2px;
+				    background: url("../../../assets/images/icon/select-dropdown.png")no-repeat #fff 46%;
+				}
+
+				select {
+					appearance:none;
+					-webkit-appearance: none;
+					-moz-appearance: none;
+					padding: 9px 20px;
+					border-radius: 0;
+					border: 1px solid #cccccc;
+					background: #fff;
+					box-shadow: inset 1px 1px 3px rgba(51, 51, 51, 0.1);
+					
+
+					&:-moz-focusring {
+						color: transparent;
+						text-shadow: 0 0 0 #000;
+					}
+				}
+			}
+		}
+
+		input[type="checkbox"] {
+			float: left;
+			margin-right: 10px;
+		}
+
+
+		.terms {
+			label {
+				color: #808080;
+				text-transform: none;
+				font-family: "Proxima N W01 Reg", serif;
+				font-weight: normal;
+			}
+		}
+	}
+}
+
+.living-form-thanks {
+	border:3px solid #ed1c29;
+	text-align:center;
+	padding:30px;
+
+	h1 {
+		margin-bottom: 0;
+	}
+}
+
+.living-labs-terms {
+	.container {
+		padding-top: 0;
+	}
+	.terms-conditions {
+		border-top:3px solid #f2f2f2;
+		padding-top:30px;
+
+		h2 {
+			text-transform: uppercase;
+		}
+		ol {
+			padding-left:23px;
+		}
+
+		li {
+			margin-bottom: 15px;
+			color: #4d4d4d;
+			padding-left: 15px;
+		}
+	}
+}
+
+@media (max-width:$screen-md) {
+	.living-labs-form {
+		.living-form {
+			padding: 40px 50px;
+		}
+	}
+}
+
+@media (max-width:$screen-sm) {
+	.living-labs-form {
+		.living-form {
+			select {
+				option {
+					font-size: 12px;
+					font-size: 1.2rem;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width:$screen-xs) {
+	.living-form-thanks {
+
+		h1 {
+			font-size:30px;
+			font-size: 3rem; 
+		}
+	}
+
+	.living-labs-form {
+
+		.living-form {
+			select {
+				background: url("../../../assets/images/icon/select-dropdown.png") no-repeat 93% #fff;
+			}
+
+			.terms {
+				margin-bottom: 30px;
+			}
+		}
+	}
+}
+

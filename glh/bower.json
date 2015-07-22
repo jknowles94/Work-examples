@@ -1,0 +1,24 @@
+{
+  "name": "Every-LaunchSite",
+  "version": "0.0.0",
+  "homepage": "https://github.com/mcmr/Every-LaunchSite",
+  "authors": [
+    "Jonathan Fielding <jonathan@mccormackmorrison.com>"
+  ],
+  "license": "Private",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "SimpleStateManager": "~2.1.0",
+    "jquery": "~1.10.2",
+    "modernizr": "~2.7.1",
+    "gmaps": "~0.4.9",
+    "sass-bootstrap": "~3.0.2"
+  }
+}

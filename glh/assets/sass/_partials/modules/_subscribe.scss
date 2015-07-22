@@ -1,0 +1,120 @@
+.mod-subscribe{
+	padding: 54px 15px 30px;
+
+	.container{
+	}
+
+	.h1{
+		font-size: 42px;
+		font-size: 4.2rem;
+		@media (min-width:$screen-md){
+			margin:0;
+		}
+	}
+
+	.step {
+		background: $color-red;
+		position:relative;
+		padding:10px 0 7px;
+		display: block;
+		color:$color-white;
+		width:40px;
+		margin: 0 auto 20px;
+		font-size: 20px;
+		font-size: 2rem;
+		text-align: center;
+
+		&:before {
+			content: " ";
+			position:absolute;
+			border:20px solid transparent;
+			border-top:10px solid $color-red;
+			bottom:-30px;
+			left:0;
+			width:30px;
+			display: block;
+		}
+	}
+
+	.h3{
+		font-size: 20px;
+		font-size: 2rem;
+		margin-bottom: 1.5em;
+		text-align: center;
+	}
+
+	h3{
+		margin-bottom: 10px;
+	}
+
+	.mod-subscribe-details {
+		margin-bottom: 20px;
+		input{
+			max-width: 430px;
+			margin:0 auto 10px;
+			display: block;
+		}
+	
+		.form-row{
+			max-width: 430px;
+			margin: 0 auto;
+		}
+	}
+
+	.mod-subscribe-services {
+		text-align: left;
+		margin-bottom:20px;
+
+		@media(min-width:$screen-sm){
+			.subscribe-checkboxes{
+				display: table;
+				width:100%;
+				.subscribe-checkboxes-col {
+					display: table-cell;
+					width: 33%;
+					padding:15px 20px;
+					border-right:1px solid $color-grey-lighter;
+					@media (min-width: $screen-sm){
+						background:$color-grey-light;
+						background:rgba($color-grey-light,.5);
+					}
+				}
+			}
+		}
+
+		label{
+			display: block;
+			font-weight: normal;
+			text-align: left;
+			@include clearfix();
+
+			span{ overflow:hidden; display:block; vertical-align:top; }
+
+			input{
+				margin-right:10px;
+				margin-bottom:10px;
+				float:left;
+				clear: both;
+			}
+		}
+	}
+}
+
+.mod-subscription-miniForm{
+	.h1{
+		float: left;
+		margin-bottom:10px;
+		@media (min-width:$screen-md) {
+				margin-right: 30px;
+				margin-bottom: 0;
+			}
+	}
+
+	.form{
+		float: left;
+	}
+
+	.inputAndBtn{
+		margin-top: 4px;
+	}
+}

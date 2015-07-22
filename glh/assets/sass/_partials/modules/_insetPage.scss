@@ -1,0 +1,58 @@
+.mod-insetPage{
+	@media(min-width:$screen-sm){
+		background: $color-grey-light;
+	}
+
+	@media(max-width:$screen-xs-max){
+		.container {
+			padding:10px;
+		}
+	}
+
+	.mod-insetPage-header{
+		text-align:center;
+		padding: 30px;
+		color: $color-white;
+		font-size:72px;
+		font-size: 7.2rem;		
+
+		@media(min-width:$screen-sm){
+			padding:150px 0 300px;
+		}
+	}
+
+	.intro{
+		font-size:22px;
+		font-size: 2.2rem;
+	}
+
+	h2{
+		text-transform: uppercase;
+	}
+
+	.row {
+		@media(min-width:$screen-sm){
+			margin-bottom: 30px;
+		}
+	}
+
+	.mod-insetPage-page {
+		background: $color-white;
+
+		h2 {
+			margin:15px 0 10px;
+		}
+
+		.intro {
+			p {	
+				font-family: $font-header;
+			}
+		}
+
+		@media(min-width:$screen-sm){
+			margin-top: -300px;
+			padding:30px 60px;
+		}
+	}
+
+}

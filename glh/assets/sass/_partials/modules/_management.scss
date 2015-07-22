@@ -1,0 +1,95 @@
+.mod-management {
+	@extend .mod-people;
+
+	background: $color-grey-lighter;
+	position: relative;
+	
+	.touch & {
+		padding-bottom:40px;
+	}
+
+	.container {
+		overflow:hidden;
+		.touch & {
+			position:relative;
+			@media (min-width:$screen-md){ padding-bottom:80px; }
+		}
+	}
+
+	.next,
+	.prev{
+		display: none;
+		opacity: 0;
+		background: $color-black;
+		background: rgba($color-black, .4);
+		padding: 15px;
+		border:2px solid $color-white;
+		box-shadow: 0 0 4px rgba($color-black, .5);
+		position:absolute;
+		top:190px;
+		@media (min-width:$screen-md){ top:260px; }
+		@include transition(opacity .2s linear);
+		z-index: 100;
+
+		&:before {
+			content: " ";
+			display: inline-block;
+		}
+
+		.touch & {
+			top:auto;
+			bottom:0;
+			opacity: 1;
+			border:0;
+			box-shadow: none;
+		}
+	}
+
+	&:hover {
+		.next,
+		.prev{
+			opacity: 1;
+		}
+	}
+
+	.next{
+		right:0;
+		border-right:0;
+		&:before {
+			@include arrow-right-white();
+		}
+	}
+	.prev{
+		left:0;
+		border-left:0;
+		&:before {
+			@include arrow-left-white();
+		}
+	}
+
+	ul{
+		@media(min-width:$screen-sm){
+			width:9999px;
+			margin:0 -15px;
+			padding:0;
+		}
+
+		li {
+			margin:0;
+		}
+	}
+
+	@media(min-width:$screen-md){
+		li {
+			
+		}
+	}
+}
+
+
+@media screen and (max-width: $screen-xs-max){
+
+	.mod-management ul li a .textContent:before {
+		background:none;
+	}
+}

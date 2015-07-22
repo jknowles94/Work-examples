@@ -1,0 +1,356 @@
+
+// ----- Header & Nav -----
+
+// Login bar in header
+.login-panel {
+	position: static;
+	z-index: 1040;
+	width: 100%;
+	margin: -243px 0 0 0;
+	padding: 22px 0;
+	background:$color-grey-lightest;
+
+	.container { 
+		position: relative; 
+		z-index: 100;
+	}
+
+	.login-btn {
+		position: absolute;
+		top: 243px;
+		right:7px;
+		width:80px;
+		padding:8px 20px 8px;
+		@include rem(font-size, 14px);
+		border-radius:5px;
+		color:$color-brand-1;
+		text-align: center;
+		text-decoration: none;
+		background:$color-grey-lightest;
+		outline: none;
+
+		&:hover, &:focus {
+			color:$color-brand-2;
+			text-decoration: none;
+		}
+	}
+
+	&.open {
+		.login-btn {
+			top:222px;
+			i {
+				margin-top:-4px;
+
+				&:before {
+					transform:rotate(180deg);
+					-ms-transform:rotate(180deg); /* IE 9 */
+					-webkit-transform:rotate(180deg); /* Opera, Chrome, and Safari */
+				}
+			}
+		}
+	}
+}
+
+.header {
+	background: #fff;
+	box-shadow: 0 5px 5px -5px #333333;
+	padding:0 0 3px;
+
+    &.logged-out {
+    	z-index: 1;
+	    -moz-box-shadow:0 5px 5px rgba(182, 182, 182, 0.5);
+		-webkit-box-shadow: 0 5px 5px rgba(182, 182, 182, 0.5);
+		box-shadow: 0 5px 5px rgba(182, 182, 182, 0.5);
+	}
+	&.logged-in {
+		.logo {
+			margin:10px 0 10px;
+		}
+	}
+}
+nav.nav-primary {
+	display:none;
+} 
+
+.offsite {
+    background-color: #003d79;
+    border-left: 1px solid #0071bc;
+    border-right: 1px solid #0071bc;
+    margin: 0 auto;
+    padding: 0 15px;
+    float: right;
+
+	li:not(:first-child) {
+		border-left: 1px solid #C0C0C0;
+	}
+}
+
+
+.logo {
+	float:left;
+	margin: 15px 0 20px;
+
+	img {
+		width:200px;
+	}
+}
+
+// Burger Menu
+.burger {
+	float:right;
+	width:32px;
+	height:32px;
+	margin:18px -10px 0 0;
+	cursor:pointer;
+
+	.icon-menu {
+		&:before {
+			color:$color-brand-2;
+			@include rem('font-size', 24px);
+		}
+	}
+	&:hover, &:focus {
+		@include single-transition(color, 300ms);
+		.icon-menu {
+			&:before {
+				color:$color-grey-darkest;
+			}
+		}
+	}
+}
+
+// Mobile slidebar
+#sb-site {
+		&.bg-gradient {
+		background-color:#fff;
+  		background-image: linear-gradient(#f2f2f2, #fff);
+	}
+}
+.sb-slidebar {
+	background-color:$color-brand-2;
+	border-left:4px solid $color-brand-1;
+
+	&.sb-active {
+		padding:18px 0 30px;
+	}
+
+	.close {
+		opacity:0.7;
+		margin-right:15px;
+
+		i { 
+			@include rem(font-size, 20px); 
+			color:#fff;
+			text-shadow:none;
+		}
+	}
+
+	.nav {
+		width:100%;
+
+		li, a {
+			float:none;
+		}
+
+		.sb-offsite {
+		border-top: 1px solid #0071bc;
+		border-bottom: 1px solid #0071bc;
+		background-color: #003d79;
+
+			li:first-child {
+				margin-top: 10px;
+			}
+
+			li:last-child {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	ul {
+		float:none;
+	}
+	li {
+		@include rem('font-size', 16px);
+		line-height:22px;
+
+		a {
+			padding:10px 30px;
+			color:#fff;
+			display: block;
+			font-weight: normal;
+			text-align: left;
+		}
+	}
+	.login {
+		border-bottom:1px solid red;
+		a {
+			background-color: #053977;
+			display: block;
+			border-top:1px solid #3363a9;
+		}
+	}
+}
+
+
+/* 767px and down */
+@media (max-width: $screen-sm-custom-max) { 
+
+	.sb-slidebar li a {
+		padding: 10px 20px;
+		@include rem(font-size, 14px); 
+	}
+}
+
+/* 768px and up */
+@media (min-width: $screen-sm-min) { 
+
+	.login-panel {
+		margin: -141px 0 0 0;
+		position:fixed;
+
+		.login-btn {
+			position: absolute;
+			right: 0;
+			top: 103px;
+			width:100px;
+			padding: 11px 30px;
+			margin-top: 15px;
+			@include rem(font-size, 16px); 
+			border:0;
+
+			border-bottom-left-radius:5px;
+			border-bottom-right-radius:5px;
+		}
+
+		&.open .login-btn {
+			top: 101px;
+		}
+	}
+	.logo {
+		img {
+			width:348px;
+		}
+	}
+	.header {
+    	padding:0;
+    }	
+
+	nav.nav-primary {
+		display:block;
+		background-color:$color-brand-2;
+		border-bottom:5px solid $color-brand-1;
+		float:none;
+		
+		ul {
+			clear:both;
+			margin: 10px 0;
+
+			li {
+				margin-left:20px;
+
+				&:first-child {
+					margin-left:0;
+				}
+			}
+			
+			a {
+				color:#fff;
+				padding: 2px;
+				margin-left: 10px;
+				@include rem(font-size, 16px);
+			}
+		}
+	}
+	nav.login {
+		float:right;
+		margin-top:25px;
+
+		li {
+			padding:5px 20px;
+			border-left:1px solid $color-grey-light;
+
+			&:first-child {
+				border-left:0;
+			}
+			&.login-name a {
+
+				i {
+					color:$color-grey-dark;
+				}
+			}
+			&.logout a {
+				font-weight: normal;
+			}
+		}
+	}
+}
+
+
+/* 991px and down */
+@media (max-width: $screen-md-custom-max) {  
+
+	.fullwidth {
+		margin:20px 0;
+		padding:10px 0;
+	}
+
+	.fullwidth-bg {
+		padding-top:0;
+		.bg-white.promo-block {
+			margin-top:20px;
+		}
+	}
+	.social-bar {	
+		.avatar {
+			margin-top:-10px;
+			img {
+				display: none;
+			}
+			p {
+				float:none;
+				padding:0 10px;
+				text-align: center;
+			}
+		}
+		.connect {
+			span {
+				display: none;
+			}
+			i{
+				min-width:100%;
+				border-right:0;
+			}
+		}
+	}
+}
+
+#menu-logged-in-external-menu { 
+	margin-left: 5%;
+}
+
+
+/* ----- MD ----- */
+/* 992px and up */
+@media (min-width: $screen-md-custom-min) {  
+
+}
+
+/* 992px - 1199px */
+@media (min-width: $screen-md-custom-min) and (max-width: $screen-lg-custom-max) {  
+
+#menu-logged-in-external-menu { 
+	margin-left: 8%;
+}
+
+}
+
+/* ----- LG ----- */
+/* 1200px and up */
+@media (min-width: $screen-lg-custom-min) { 
+
+	#menu-logged-in-external-menu { 
+	margin-left: 3%;
+}
+
+}

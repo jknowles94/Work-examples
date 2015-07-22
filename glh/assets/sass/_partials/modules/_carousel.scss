@@ -1,0 +1,179 @@
+.mod-carousel {
+	background: #ccc;
+
+	// @media(min-width:$screen-md){
+	// 	margin-top:170px;
+	// }
+	// @media(min-width:$screen-lg){
+	// 	margin-top:110px;
+	// }
+
+	.carousel-caption {
+		@extend .h1;
+		color:$color-white;
+		font-size: 40px;
+		font-size: 4rem;
+		left: auto;
+		right: auto;
+		top: auto;
+		bottom: 20px;
+		width: 100%;
+		padding: 0 30px;
+		text-align: center;
+
+		@media(min-width:$screen-xs){
+			font-size: 40px;
+			font-size: 4rem;
+		}		
+
+		@media(min-width:$screen-sm){
+			font-size: 70px;
+			font-size: 7rem;
+		}		
+
+		@media(min-width:$screen-md){
+			font-size: 80px;
+			font-size: 8rem;
+		}
+	}
+
+
+	.carousel-control {
+
+		@media (min-width: $screen-sm){
+			background-color:$color-black;
+			top:50%;
+			bottom:auto;
+			width: auto;
+			height: auto;
+			display: block;
+			border: 2px solid $color-white;
+			opacity: .4;
+			padding: 10px 15px;
+			margin-top: -20px;
+
+			&:before{
+				display: inline-block;
+				content : " ";
+				position: relative;
+			}
+			&.left{
+				left:20px;
+				&:before{
+					@include arrow-left-white();
+				}
+			}
+			&.right{
+				right:20px;
+				&:before{
+					@include arrow-right-white();
+				}
+			}
+
+			&:hover{
+				opacity: .6;
+			}
+
+
+		}
+	}
+
+}
+
+@media screen and (max-width: $screen-xs){
+	.mod-carousel{
+		.item{
+			min-height: 200px;
+			text-align: center;
+
+			img{
+				width: auto;
+				display: inline-block;
+				height: 200px;
+				max-width: initial;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $screen-sm-min){
+	.mod-carousel{
+		.item{
+			height: 500px;
+
+			.carousel-caption{
+				text-align: center;
+				margin: 0 auto!important;
+				position: relative;
+				max-width: 600px;
+				padding: 135px 0 0 0;
+			}
+
+			img{
+				position: absolute;
+				height: auto;
+				left: 0px;
+				top: 0px;
+				width: 100%;
+				min-width: 1400px;
+				max-width: initial!important;
+			}
+		}
+	}
+	
+}
+
+@media screen and (min-width: 900px){
+	.mod-carousel{
+		.item{
+			.carousel-caption{
+				// padding-right: 0px;
+				max-width: 720px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $screen-md-min){
+	.mod-carousel{
+		.item{
+			.carousel-caption{
+				// padding-right: 50px;
+				max-width: 800px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1130px){
+	.mod-carousel{
+		.item{
+			.carousel-caption{
+				// padding-right: 200px;
+				max-width: 940px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $screen-lg-min){
+	.mod-carousel{
+		.item{
+			.carousel-caption{
+				// padding-right: 300px;
+				max-width: 1000px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1320px){
+	.mod-carousel{
+		.item{
+			.carousel-caption{
+				// padding-right: 400px;
+				max-width: 1140px;
+			}
+		}
+	}
+}

@@ -1,0 +1,86 @@
+@mixin arrow-right-red() {
+	background: url('../images/icon/icons.png') no-repeat -8px -13px;
+	width: 24px;
+	height: 15px;
+}
+
+@mixin arrow-right-white() {
+	background: url('../images/icon/icons.png') no-repeat -54px -13px;
+	width: 24px;
+	height: 15px;
+}
+
+@mixin arrow-left-red() {
+	background: url('../images/icon/icons.png') no-repeat -8px -59px;
+	width: 24px;
+	height: 15px;
+}
+
+@mixin arrow-left-white() {
+	background: url('../images/icon/icons.png') no-repeat -51px -59px;
+	width: 24px;
+	height: 15px;
+}
+
+@mixin arrow-down-red() {
+	background: url('../images/icon/icons.png') no-repeat -14px -95px;
+	width: 14px;
+	height: 17px;
+}
+
+@mixin arrow-right-black() {
+	background: url('../images/icon/icons.png') no-repeat -281px -16px;
+	width: 24px;
+	height: 13px;
+}
+
+@mixin icon-phone(){
+	background: url('../images/icon/icons.png') -101px -6px;
+	width: 32px;
+	height: 31px;
+}
+
+@mixin icon-fax(){
+	background: url('../images/icon/icons.png') -144px -6px;
+	width: 36px;
+	height: 31px;
+}
+
+@mixin icon-pin(){
+	background: url('../images/icon/icons.png') -104px -55px;
+	width: 28px;
+	height: 43px;
+}
+
+@mixin icon-phone-small(){
+	background: url('../images/icon/icons.png') -50.5px -3px;
+	background-size: 177.5px;
+	width: 16px;
+	height: 15.5px;
+}
+
+@mixin icon-fax-small(){
+	background: url('../images/icon/icons.png') -72px -3px;
+	background-size: 177.5px;
+	width: 18px;
+	height: 15.5px;
+}
+
+@mixin icon-pin-small(){
+	background: url('../images/icon/icons.png') -52px -27.5px;
+	background-size: 177.5px;
+	width: 14px;
+	height: 21.5px;
+}
+
+@mixin icon-plus(){
+	background: url('../images/icon/icons.png') -200px -13px;
+	width: 16px;
+	height: 16px;
+}
+
+@mixin icon-download(){
+	background: url('../images/icon/icons.png') -247px -17px;
+	width: 8px;
+	height: 11px;
+}

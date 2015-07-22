@@ -1,0 +1,98 @@
+
+body {
+
+	@media (min-width:$screen-sm) {
+		padding-top:60px; 
+	}
+}
+@media (min-width:$screen-sm-min){
+	.mt-subnav {
+		padding-top: 58px;
+	}
+}
+
+section .container {
+	padding: 30px;
+	@media (min-width:$screen-md){
+		padding:70px 0;
+	}
+}
+
+.container-sm{
+	@extend .container;
+	@media (min-width: $screen-md) {
+		max-width: 700px;
+	}
+}
+
+.container-max-935{
+	@extend .container;
+	@media (min-width: $screen-md) {
+		max-width: 935px;
+	}
+}
+
+
+@media (min-width:$screen-sm){
+	.layout-twinColWithBtns {
+		@include make-row();
+	 	position:relative;
+		padding-bottom:70px;		
+
+		.layout-twinColWithBtns-btn{
+			position: absolute;
+			width: 300px;
+			bottom: 0;
+		}
+		.layout-twinColWithBtns-col{
+			@include make-sm-column(6);
+			position:static;
+		}
+
+		.layout-twinColWithBtns-col:first-child {
+			.layout-twinColWithBtns-btn{
+				left:50%;
+				margin-left: -315px;
+			}
+		}
+
+		.layout-twinColWithBtns-col:last-child {
+			.layout-twinColWithBtns-btn{
+				right:50%;
+				margin-right: -315px;
+			}
+		}
+	}
+}
+
+.layout-imageHeader{
+	color: $color-white;
+	text-align:center;
+	margin:0;
+	padding:20px;
+
+	@media(min-width:$screen-xs){
+		font-size: 72px;
+		font-size: 7.2rem;
+		padding: 40px 20px;
+	}
+
+	@media(min-width:$screen-sm){
+		padding: 100px 30px;	
+	}
+
+	@media(min-width:$screen-md){
+		padding:150px 30px;
+	}
+}
+
+.row-narrowCol{
+	@include make-row();
+	margin-left:-7.5px;
+	margin-right:-7.5px;
+
+	*[class*='col-']{
+		padding-left:7.5px;
+		padding-right:7.5px;
+	}
+}

@@ -1,0 +1,73 @@
+//Awards
+.mod-awards {
+	ul{
+		font-size: 16px;
+		font-size: 1.6rem;
+		margin:0;
+		padding:0;
+	}
+	
+	li {
+		clear:both;
+		margin:0;
+		padding:0;
+		list-style-type: none;
+		@media (min-width:$screen-xs) {
+			clear:none;
+			width:50%;
+			float:left;
+			padding-right: 30px;
+			margin-bottom: 10px;
+
+			&:nth-child(odd){
+				clear:both;
+			}
+		}
+	}
+
+	img {
+		@media (max-width:$screen-xs - 1) {
+			@include push-left();
+			width:90px;
+		}
+
+		@media (min-width:$screen-xs) {
+			margin:0;
+			width:160px;
+			margin:0 auto 10px;
+			display: block;
+
+		}
+		@media (min-width:$screen-sm) {
+			@include push-left();
+			width:90px;
+		}
+		@media (min-width:$screen-md) {
+			@include push-left();
+			width:160px;
+		}
+	}
+	.title, .date{
+		font-family: $font-header;
+		text-transform: uppercase;
+	}
+	.title {
+		color: $color-grey-medium;
+		font-size: 30px;
+		font-size: 3rem;
+		margin-bottom: 0;
+		font-family: $font-header-bold;
+	}
+	.year {
+		color: $color-grey-medium-light;
+		font-size: 20px;
+		font-size: 2rem;
+		margin-bottom: .1em;
+	}
+
+	.textContent {
+		overflow: hidden;
+	}
+
+
+}

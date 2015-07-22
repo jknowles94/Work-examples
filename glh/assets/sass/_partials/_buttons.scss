@@ -1,0 +1,128 @@
+// SOCIAL
+@mixin btn-social($color) {
+	text-indent: -9999em;
+	width:40px;
+	height:40px;
+	margin:0 10px 0 0;
+	padding:0;
+	display:inline-block;
+	background: $color;
+	background-image: url(../images/icon/social.png);
+	&:hover{
+		background-color:darken($color, 10%);
+	}
+}
+
+.btn-facebook,
+.nav .btn-facebook {
+	@include btn-social($color-facebook);
+	background-position: -55px -6px;
+}
+
+.btn-twitter,
+.nav .btn-twitter {
+	@include btn-social($color-twitter);
+	background-position: -3px -8px;
+}
+
+.btn-youtube,
+.nav .btn-youtube { 
+	@include btn-social($color-youtube);
+	background-position: -5px -56px;
+}
+
+// ARROW BUTTON
+.btn-arrow {
+	position: relative;
+	padding: 10px 20px;
+	padding-right: 55px;
+	display: inline-block;
+	border: 2px solid rgb(220, 220, 220);
+	border: 2px solid rgba(220, 220, 220, 0.5);
+	color: $color-red;
+	text-transform: uppercase;
+	font-family: $font-header-bold;
+	font-size:23px;
+	font-size:2.3rem;
+	line-height:1em;
+	background:transparent;
+	box-shadow:none;
+	cursor:pointer;
+
+	&:before{
+		@include arrow-right-red();
+		content: " ";
+		display: block;
+		right:20px;
+		top:13px;
+		position:absolute;
+	}
+	&:hover{
+		color:$color-red;
+		opacity: .8;
+		text-decoration:none;
+	}
+
+	@media(max-width:$screen-xs){
+		padding:12px 55px 10px 20px;
+
+		&:before{
+			top:12px;
+		}
+	}
+}
+input.btn-arrow {
+	background:url("../images/icon/icons.png") 95px 0 no-repeat;
+	font-size:23px;
+}
+
+.btn-arrow-white{
+	@extend .btn-arrow;
+	color:$color-white;
+	&:before{
+		@include arrow-right-white();
+	}
+	&:hover {
+		color:$color-white;
+		opacity: .8;
+	}
+}
+
+.btn-arrow-black{
+	@extend .btn-arrow;
+	color:$color-grey-dark;
+	background:$color-white;
+	border-color: $color-grey-medium-lighter;
+	&:before{
+		@include arrow-right-black();
+	}
+	&:hover {
+		color:$color-grey-dark;
+		opacity: .8;
+	}
+}
+
+.btn-plus {
+	@extend .btn-arrow;
+	&:before {
+		@include icon-plus();
+	}
+	&:hover {
+		opacity: 1;
+	}
+}
+
+//Buttons List
+ul.btn-list{
+	margin:0;
+	padding:0;
+	text-align:center;
+
+	li{
+		text-align: left;
+		margin:0 5px 10px;
+		padding:0;
+		list-style-type: none;
+		display: inline-block;
+	}
+}

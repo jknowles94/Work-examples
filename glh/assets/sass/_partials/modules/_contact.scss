@@ -1,0 +1,141 @@
+.mod-contact{
+	@include clearfix();
+
+	input {
+		margin-bottom: 10px;
+	}
+
+	dt, h3{ margin-bottom: 1em; }
+	dd{ margin-bottom: 1.8em; }
+
+	dd {
+		overflow: hidden;
+		float:left;
+		width:59%;
+	}
+
+	.telephone dd, .fax dd {
+		width:100%;
+	}
+
+	@media (max-width: $screen-xs){
+		.address,
+		.telephone,
+		.fax {
+			clear:both;
+			display: block;
+		}
+		.address {
+			dt {
+				margin-top:	10px;
+			}
+			dd {
+				margin-bottom:0;
+			}
+		}
+	}
+	
+	@media (min-width: $screen-xs){
+		.address,
+		.telephone,
+		.fax {
+			position:relative;
+			padding-left: 95px;
+			overflow: hidden;
+
+			&:before{
+				position: absolute;
+				top:0;
+				left:0;
+				content: " ";
+				display: block;
+			}
+		}
+		.address:before{
+			@include icon-pin();
+		}
+		.telephone:before{
+			@include icon-phone();
+		}
+		.fax:before{
+			@include icon-fax();
+		}
+	}
+
+	ol{
+		margin:0;
+		padding:0;
+
+		.showOnMap {
+			color: $color-red;
+			font-family: $font-header-bold;
+			text-transform: uppercase;
+		}
+
+		li {
+			@include clearfix();
+
+			padding: 40px 30px 0;
+			list-style-type: none;
+			background: $color-grey-lighter;
+			margin:0 auto 30px;
+			position:relative;
+
+			@media(min-width: $screen-md){
+				width: 75%;
+				padding:30px 80px 0;
+			}
+		}
+
+		.number{
+			position: absolute;
+			top:0;
+			left: 0;
+			color: $color-white;
+			background: $color-red;
+			font-family: $font-header;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			font-size: 21px;
+			font-size: 2.1rem;
+			text-align: center;
+		}
+		.address,
+		.telephone,
+		.fax {
+			overflow: hidden;
+			padding-left:0;
+			position: relative;
+
+			&:before{
+				position: absolute;
+				top:0;
+				left:0;
+				content: " ";
+				display: block;
+			} 
+		}
+		.telephone,
+		.fax {
+			padding-left:25px;
+		}
+
+		.address {
+			@media(min-width: $screen-xs){
+				float:left;
+				width:60%;
+			}
+	
+			&:before{
+				background: none;
+			}
+		}
+		.telephone:before{
+			@include icon-phone-small();
+		}
+		.fax:before{
+			@include icon-fax-small();
+		}
+	}
+}

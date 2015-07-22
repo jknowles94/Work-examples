@@ -1,0 +1,117 @@
+.mod-tabs{
+	.tabs-col-sidebar{
+		@include clearfix();
+		@include make-sm-column(4, 0);
+		background: $color-grey-lighter;
+		margin-bottom:20px;
+
+		.tabs-logo{
+			//Screen size XS to SM only
+			@media (min-width: $screen-xs) and (max-width: $screen-sm - 1){
+				@include make-xs-column(5, 0);
+			}
+
+			img{
+				width:100%;
+			}
+		}
+		.tabs-btns{
+			background: $color-grey-lighter;
+			padding: 20px;
+
+			//Screen size XS to SM only
+			@media (min-width: $screen-xs) and (max-width: $screen-sm - 1){
+				@include make-xs-column(7, 0);
+				padding:20px;
+			}
+
+			a{
+				display: block;
+				width: 100%;
+				margin-bottom: 10px;
+				font-size:20px;
+				font-size: 2rem;
+
+				//Screen size up to MD
+				@media (max-width: $screen-md - 1){
+					font-size:15px;
+					font-size: 1.7rem;
+
+					&:before {
+						top: 11px;
+						right: 15px;
+					}
+				}
+
+				//Screen size SM - MD only
+				@media (min-width: $screen-sm) and (max-width: $screen-md - 1) {
+					padding: 10px 15px 9px;
+					padding-right: 48px;
+				}
+
+				&:last-child {
+					margin-bottom:0;
+				}
+			}
+		}
+	}
+	.tabs-col-content{
+		@include make-sm-column(8, 0);
+		padding-left:0;
+
+		.tab-content {
+			//Screen from SM
+			@media (min-width: $screen-sm){
+				margin:0 30px;
+			}	
+
+			@media (max-width: $screen-xs-max){
+				#locations footer {
+					display: none !important;
+				}
+			}
+		}
+	}
+
+	.container {
+		@media (min-width: $screen-sm){
+			padding:0;
+		}
+	}
+
+
+	.textContent{
+		margin-bottom: 30px;
+	}
+
+	.cta {
+		border-top: 4px solid $color-grey-medium-light;
+		border-top: 4px solid rgba($color-grey-medium-light, .3);
+		border-bottom: 4px solid $color-grey-medium-light;
+		border-bottom: 4px solid rgba($color-grey-medium-light, .3);
+		text-align: center;
+		margin-bottom: 30px;
+
+		a {
+			background: url('../images/icon/arrow-short-right-red.png') no-repeat  197px 8px;
+			display: inline-block;
+			vertical-align: middle;
+			border-left: 1px solid $color-grey-medium-light;
+			border-left: 1px solid rgba($color-grey-medium-light, .3);
+			font-size:16px;
+			font-size:1.6rem;
+			line-height: 1.6;
+			margin: 15px 0;		
+			padding: 0 10px;	
+
+			@media(min-width:$screen-xs){
+				margin: 15px 0;			
+				width: 45%;
+			}
+
+			&:first-child {
+				border-left:0;
+			}
+		}
+	}
+}

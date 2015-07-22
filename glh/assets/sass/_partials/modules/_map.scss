@@ -1,0 +1,125 @@
+.mod-map {
+
+	.lt-ie9 & {display:none;}
+	@media( max-width: $screen-md - 1){
+		display: none;
+	}
+	height:600px;
+
+	&.map-smaller{
+		height:400px;
+	}
+	
+	.infoBox{
+			min-width: 150px;
+			padding:12px 0 15px 18px;
+
+		.logo {
+			float:left;
+			width: 37px;
+			margin:0 20px 0 10px;
+		}
+		.textContent{
+			overflow: hidden;
+		}
+		.directions {
+			color: $color-red;
+			font-family: $font-header-bold;
+			margin-top:0;
+			text-transform: uppercase;
+			display: block;
+			font-size:20px; 
+			background: url('../images/icon/arrow-short-right-red.png') no-repeat  126px 8px;
+		}
+		a{ font-family: $font-header-bold;}
+		.btn-arrow{ 
+			font-size:23px; 
+			font-size:2.3rem; 
+			width:100%;
+			margin-top: 10px;
+		}
+		h2{
+			margin-bottom: 0;
+			font-size:20px; 
+		}
+		dt{
+			display: inline-block;
+			width:60px;
+		}
+		dd{ display:inline-block; }
+		p{ margin-bottom:0}
+	}
+}
+
+.mod-map-wrapper{
+	position: relative;
+
+	.lt-ie9 & {display:none;}
+
+	@media( max-width: $screen-md - 1){
+		display: none;
+	}
+
+	.container{
+		padding:0;
+	}
+
+	.map-heading,
+	.map-countries,
+	.map-brands,
+	.no-results{
+		z-index: 99;
+	}
+	.map-countries{
+		.dropdown-active{
+			border-left: 1px solid rgba($color-grey-medium-light,.7);
+		}
+	}
+
+	.dropdown-select{
+		height: 50px;
+		margin-top: 24px;
+		background: #fff;
+		color: #333;
+
+		> ul li{
+			background: #fff;
+
+			&:hover{
+				background: #eee;
+			}
+		}
+	}
+
+	.map-heading{
+		.h1{
+			color: #333333;
+			padding:20px 0 0px;
+			text-align: left;
+		}
+	}
+
+	.map-controls {
+		z-index: 100;
+		background: #e6e6e6;
+	}
+
+	.map-heading,
+	.map-brands,
+	.map-countries,
+	.no-results{
+		position:relative;
+	}
+
+
+	.no-results{
+		color: #ff0000;
+		line-height: 45px;
+		padding-left: 20px;
+		font-size: 17px;
+		font-family: "TradeGothicW01-BoldCn20 675334", serif;
+		display: none;
+		z-index: 1;
+		text-align: center
+	}
+}

@@ -1,0 +1,135 @@
+.mod-people{
+	background: $color-grey-lighter;
+
+	ul{
+		font-size: 0;
+		@include transition( margin-left .5s linear );
+
+		@media(max-width:$screen-sm - 1){
+			@include make-row();
+		}
+
+		@media(min-width:$screen-sm){
+			margin:0 -15px;
+			padding:0;
+		}
+
+		margin:0;
+		padding:0;
+
+		li {
+			margin:0;
+			padding:0;
+			list-style-type: none;
+			position: relative;
+			display: inline-block;
+			font-size:14px;
+			font-size:1.8rem;
+			vertical-align: top;
+
+			@media(max-width:$screen-sm - 1){
+				@include make-xs-column(6);
+				float:none;
+				margin-bottom: 15px;
+				display: inline-block;
+			}
+
+			@media(min-width: $screen-xs) and (max-width:$screen-sm - 1){
+				@include make-xs-column(4);
+				float:none;
+				margin-bottom: 20px;
+			}
+
+			@media(min-width:$screen-sm){
+				width:150px;
+				margin: 0 15px 15px;
+			}
+
+			@media(min-width:$screen-md){
+				width:220px;
+				margin: 0 15px 15px;
+			}
+
+			@media(min-width:$screen-lg){
+				width:270px;
+				margin: 0 15px 15px;
+			}
+
+			a{
+				color: $color-grey-medium-lighter;
+				display: block;
+
+				.textContent{
+					background:$color-white;
+					padding:5% 40px 5% 5%;
+					position:relative;	
+					min-height:110px;		
+
+					&:before {
+						@include arrow-right-red();
+						position: absolute;
+						bottom:10px;
+						right:10px;
+						content: " ";
+						display: block;
+					}
+				}
+
+				&:hover {
+					text-decoration: none;
+				}
+				.name {
+					color: $color-grey-medium;
+					text-transform: uppercase;
+					font-family: $font-header-bold;
+					margin-bottom: .2em;
+					
+					@media (min-width:$screen-md) {
+						font-size:16px;
+						font-size:1.6rem;
+					}
+
+				}
+				.position {
+					margin:0;
+					font-size:14px;
+					font-size:1.4rem;
+
+					@media (max-width:$screen-xs) {
+						font-size:16px;
+						font-size:1.6rem;
+					}
+				}
+				.profile {
+					position: relative;
+					.department {
+						font-family: $font-header-bold;
+						text-transform: uppercase;
+						margin:0;
+						padding:5%;
+						position:absolute;
+						bottom:0;
+						left:0;
+						right:0;
+						background: $color-black;
+						background: rgba($color-black, .6);
+						color: $color-white;
+					}
+				}
+			}
+
+			img{
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+// @media screen and (max-width: $screen-xs-max){
+
+// 	// .mod-people ul li a .textContent:before {
+// 	// 	background:none;
+// 	// }
+// }
+	

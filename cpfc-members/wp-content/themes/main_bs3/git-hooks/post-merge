@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# Pre-commit hooks
+
+# Compile after pull
+PATH="/usr/local/bin:$PATH"
+cd wp-content/themes/main_bs3
+grunt

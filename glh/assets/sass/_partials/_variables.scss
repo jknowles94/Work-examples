@@ -1,0 +1,39 @@
+// Colors
+$color-twitter: #29abe2;
+$color-youtube: #ed3437;
+$color-facebook: #0071bc;
+
+$color-grey-lighter: #f2f2f2;
+$color-grey-light: #ccc;
+$color-grey-medium-lighter: #b3b3b3;
+$color-grey-medium-light: #999;
+$color-grey-medium: #333;
+$color-grey-dark: #1a1a1a;
+$color-yellow: #fef8a6;
+
+$color-red: #ed1c29;
+
+$color-white: #fff;
+$color-black: #000;
+
+// Margins
+$margin-xs:10px;
+$margin-sm:15px;
+$margin-md:20px;
+
+//Fonts
+$font-header:"Trade Gothic W01 Cn 18", serif;
+$font-header-bold:"TradeGothicW01-BoldCn20 675334", serif;
+$font-paragraph:"Proxima N W01 Reg", serif;
+$font-paragraph-bold:"Proxima N W01 Bold", serif;
+
+//Font sizes
+$font-size-h1: 5rem;
+$font-size-h2: 3rem;
+
+//Font colors
+$font-color-default: $color-grey-medium;
+
+//Links
+$link-color:            $color-red;
+$link-hover-color:      lighten($link-color, 5%);

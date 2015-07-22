@@ -1,0 +1,163 @@
+// ----- Modules -----
+
+.register-promo {
+	background-color:$color-brand-2;
+	padding:25px 0 30px;
+	text-align:center;
+
+	h3 {
+		margin:0 0 20px;
+		font-weight: normal;
+		@include rem(font-size, 32px);
+		font-family:$font-regular;
+		color:#fff;
+	}
+}
+
+// ---- Tweet Button ----
+.twitter-share-button {
+	margin:10px 0px;
+}
+
+// See Tickets
+.datacapture-panel {
+	max-width:600px;
+	width:100%;
+	background-color:#fff;
+	margin:80px auto;
+	padding:30px 100px;
+	border:10px solid #000;
+	text-align:center;
+
+	h1 {
+		margin-bottom:20px;
+		padding-bottom:15px;
+		@include rem(font-size, 28px);
+		display: block;
+		border-bottom:5px solid #ccc;
+
+		span {
+			color:$color-brand-1;
+		}
+	}
+	p {
+		margin-top:40px;
+	}
+	label {
+		display: block;
+		font-weight: normal;
+		text-align: left;
+		color:$color-grey-dark;
+	}
+	.datacapture {
+		max-width: 300px;
+		width:100%;
+		margin:40px auto;
+
+		.btn {
+			width:100%;
+		}
+	}
+}
+#cboxLoadedContent .datacapture-panel {
+	margin: 0 auto;
+}
+
+// ----- Sample module -----
+.grid {
+
+	&.fullwidth { padding-bottom: 15px; }
+
+	.item {
+		padding: 15px;
+		margin-bottom: 30px;
+		background: #fff;
+
+		> img:first-child, > .overlay-wrap:first-child {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+
+/* ----- XS ----- */
+/* 479px and down */
+@media (max-width: $screen-xs-custom-max) {  
+
+}
+
+/* 480px and up */
+@media (min-width: $screen-xs-custom-min) {  
+
+}
+
+/* 599px and down */
+@media (max-width: $screen-xsm-custom-max) {  
+
+}
+
+/* 600px and up */
+@media (min-width: $screen-xsm-custom-min) {  
+
+}
+
+/* 767px and down */
+@media (max-width: $screen-sm-custom-max) { 
+
+	.register-promo {
+
+		h3 {
+			@include rem(font-size, 19px);
+		}
+	}
+
+	.datacapture-panel {
+		max-width:600px;
+		width:100%;
+		margin:30px auto;
+		padding:30px 30px 20px;
+		border:10px solid #000;
+		text-align:center;
+
+		.datacapture {
+			margin:10px auto;
+		}
+	}
+
+}
+
+
+/* ----- SM ----- */
+/* 768px and up */
+@media (min-width: $screen-sm-min) { 
+
+}
+
+/* 768px - 991px */
+@media (min-width: $screen-sm-custom-min) and (max-width: $screen-md-custom-max) { 
+
+}
+
+/* 991px and down */
+@media (max-width: $screen-md-custom-max) {  
+
+}
+
+
+/* ----- MD ----- */
+/* 992px and up */
+@media (min-width: $screen-md-custom-min) {  
+
+}
+
+/* 992px - 1999px */
+@media (min-width: $screen-md-custom-min) and (max-width: $screen-lg-custom-max) {  
+
+}
+
+
+/* ----- LG ----- */
+/* 1200px and up */
+@media (min-width: $screen-lg-custom-min) { 
+
+}

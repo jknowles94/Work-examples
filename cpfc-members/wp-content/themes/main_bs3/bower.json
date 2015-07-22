@@ -1,0 +1,23 @@
+{
+  "name": "Crystal Palace Members' Site Theme",
+  "version": "0.0.0",
+  "homepage": "https://bitbucket.org/mccormackmorrison/cpfc-members",
+  "authors": [
+    "McCormack & Morrison <software@mccormackmorrison.com>"
+  ],
+  "description": "Crystal Palace Members' Site Theme",
+  "main": "index.php",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3",
+    "jquery": "~1.11.1",
+    "modernizr": "~2.8.3",
+    "SimpleStateManager": "~2.3.0",
+    "jquery-cycle2": "~2.1.6",
+    "respond": "~1.4.2",
+    "jquery-waypoints": "2.0.5",
+    "Slidebars": "~0.10.2",
+    "bootstrapValidator": "~0.5.3"
+  }
+}

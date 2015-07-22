@@ -1,0 +1,59 @@
+.mod-press-release{
+
+	.press-release {
+		@include clearfix();
+		background: $color-white;
+		padding:20px 20px 0;
+		margin-bottom: 20px;
+		font-size: 16px;
+		font-size: 1.6rem;
+
+		@media(min-width:$screen-md){
+			padding:60px 100px 30px;
+			margin-bottom:50px;
+		}
+		
+		& > header {
+			border-bottom: 4px solid $color-grey-lighter;
+			padding-bottom:10px;
+			margin-bottom:10px;
+			position:relative;
+
+			.addthis_toolbox {
+				position:absolute;
+				bottom:15px;
+				right:0;
+
+				@media(max-width:$screen-sm){
+					display:none;
+				}
+			}
+			.h2{
+				margin-bottom: .5em;
+				font-size: 40px;
+				font-size: 4rem;
+			}
+
+			time {
+				font-family: $font-header;
+				display: block;
+				text-transform: uppercase;
+			}
+		}
+
+		& > footer {
+			border-top: 4px solid $color-grey-lighter;
+			padding-top: 10px;
+			font-size: 14px;
+			font-size: 1.4rem;
+		}
+
+	}
+}
+.press-back{
+	@extend .link-back;
+	margin-top:5em;
+	@media(max-width:$screen-sm){
+		margin-top:1em;
+	}
+}

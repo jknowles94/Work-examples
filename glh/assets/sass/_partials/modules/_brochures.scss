@@ -1,0 +1,77 @@
+.mod-brochures{
+	color: $color-grey-light;
+
+	.h1{
+		color:$color-white;
+	}
+
+	ul {
+		margin:0;
+		padding:0;
+		font-size: 0;
+		text-align: center;
+
+		@media (min-width: $screen-sm){
+			margin:20px auto;
+		}
+
+		@media (min-width: $screen-md){
+			margin:30px auto 0;
+		}
+
+		li {
+			margin:0 15px 20px;
+			padding:0;
+			display: inline-block;
+			font-family: $font-header-bold;
+			font-size: 14px;
+			font-size: 1.4rem;
+			width: 110px;
+			text-align: left;
+			position:relative;
+			vertical-align: top;
+
+			@media (min-width: $screen-sm){
+				margin-bottom:0;
+			}
+
+			@media (min-width: $screen-md){
+				width: 165px;
+			}
+
+			img{
+				width: 100%;
+				position:relative;
+				margin-bottom: 10px;
+			}
+
+			.link-brochure {
+				position: relative;
+				display: block;
+				&:before{
+					@include arrow-down-red();
+					background-position: 0px -84px;
+					border:2px solid $color-grey-light;
+					padding:20px;
+					position:absolute;
+					bottom:25px;
+					left:50%;
+					display: block;
+					content: " ";
+					background-color: $color-black;
+					z-index: 100;
+					width:11px;
+					height:14px;
+					margin-left:-22px;
+				}
+			}
+
+			a{
+				color:$color-grey-light;
+				&:hover {
+					text-decoration:none;
+				}
+			}
+		}
+	}
+}

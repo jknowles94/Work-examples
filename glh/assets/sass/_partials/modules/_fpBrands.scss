@@ -1,0 +1,165 @@
+.mod-fp-brands{
+	@include clearfix();
+
+	position: relative;
+	text-align:center;
+	color: $color-white;
+	padding:54px 40px 40px;
+
+	@media (max-width:$screen-sm) {
+		padding-top:120px;
+	}
+
+	h1 {
+		text-shadow: 1px 1px 2px $color-black;
+		text-shadow: 1px 1px 2px rgba($color-black,.4);
+		font-size: 70px;
+		font-size: 7rem;
+	}
+	
+	.intro {
+		font-size: 26px;
+		font-size: 2.6rem;
+		max-width: 600px;
+		margin:0 auto;
+		font-family: $font-header;
+		text-transform: uppercase;
+		margin-bottom:30px;
+	}
+	@media (min-width:$screen-md-min) {
+		.down {
+			position:absolute;
+			top:600px;
+			left:50%;
+			margin-left:-26px;
+			background: url('../images/icon/arrow-down-white.png') no-repeat 13px 8px;
+			width: 12px;
+			height: 24px;
+			padding:20px;
+			border:2px solid #ccc;
+		}
+	}
+	
+
+	ul{
+		font-size:0;
+		margin:0;
+		padding:0;
+		width: 100%;
+
+		 li{
+		 	font-size: 1rem;
+		 	display: inline-block;
+			background: $color-black;
+			background: rgba($color-black, .8);
+			margin-right: 1px;
+			margin-bottom: 1px;
+			padding: 0;
+			width:200px;
+			height:100px;
+			
+
+			@media (min-width:$screen-sm) {
+				width:165px;
+				height:90px;
+			}
+
+			a{
+				margin:0; padding:10px;
+				line-height: 80px;
+				display: block;
+				@include transition( background .5s linear );
+
+				@media (min-width:$screen-sm) {
+					line-height: 70px;
+				}				
+				&:hover,
+				&.active {
+					background: $color-red;
+				}
+
+				img{
+					width: 140px;
+					margin:0 auto;
+				}
+			}
+		}
+	}
+
+	@media (min-width: $screen-md) {
+		height:700px;
+		padding:0;
+
+		h1 {
+			font-size: 100px;
+			font-size: 10rem;
+			margin:170px 0 30px;
+			text-shadow: 1px 1px 2px $color-black;
+			text-shadow: 1px 1px 2px rgba($color-black,.4);
+		}
+
+		ul{
+			position: absolute;
+			top: 445px;
+			left: 0;
+			width: 100%;
+			z-index: 100;
+		}
+	}
+
+	.popouts{
+		.popout {
+			display: none;
+			position:absolute;
+			right:0;
+			left:0;
+			top:0;
+			bottom:0;
+			z-index: 0;
+			height:700px;
+
+			.textContent {
+				text-align: left;
+				padding:40px;
+				position:absolute;
+				top:144px;
+				height:300px;
+				width: 663px;
+				z-index: 50;
+				left:50%;
+				margin-left: -332px;
+				background: $color-black;
+				background: rgba($color-black, .8);
+				color: $color-white;
+
+				h2 {
+					margin:0 0 10px;
+					padding:0;
+				}
+
+				img {
+					margin-bottom: 30px;
+				}
+
+				.btn-arrow-white {
+					display: inline-block;
+					height: 1em;
+					box-sizing: content-box;
+					-moz-box-sizing: content-box;
+					padding-left: 0;
+					padding-right: 44px;
+					padding-left: 10px;
+					margin-top: 10px;
+					&:before{
+						right: 10px;
+						top: 13px;
+					}
+
+				}
+			}
+		}		
+	}
+	.hero-home {
+		
+	}
+}

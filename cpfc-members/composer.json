@@ -1,0 +1,11 @@
+{
+    "name": "cpfc-members",
+    "description": "CPFC Members",
+    "keywords": [
+    ],
+    "homepage": "http://framework.zend.com/",
+    "require": {
+        "google/apiclient": "1.0.*@beta",
+        "vimeo/vimeo-api" : "1.1.*"
+    }
+}
