@@ -1,0 +1,241 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/0.10.15/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install' ]
+2 info using npm@1.3.5
+3 info using node@v0.10.15
+4 warn package.json package@0.0.0 No description
+5 warn package.json package@0.0.0 No repository field.
+6 warn package.json package@0.0.0 No README data
+7 verbose readDependencies using package.json deps
+8 verbose install where, deps [ '/Users/jake/Sites/lite-at-nite',
+8 verbose install   [ 'grunt',
+8 verbose install     'grunt-contrib-watch',
+8 verbose install     'grunt-contrib-uglify',
+8 verbose install     'grunt-contrib-compass',
+8 verbose install     'grunt-contrib-jshint',
+8 verbose install     'grunt-contrib-clean',
+8 verbose install     'grunt-shell',
+8 verbose install     'grunt-notify',
+8 verbose install     'load-grunt-tasks',
+8 verbose install     'grunt-contrib-concat',
+8 verbose install     'gulp-usemin',
+8 verbose install     'grunt-usemin' ] ]
+9 info preinstall package@0.0.0
+10 verbose readDependencies using package.json deps
+11 verbose already installed skipping grunt-contrib-uglify@~0.2.2 /Users/jake/Sites/lite-at-nite
+12 verbose already installed skipping grunt@~0.4.1 /Users/jake/Sites/lite-at-nite
+13 verbose already installed skipping grunt-contrib-watch@~0.5.2 /Users/jake/Sites/lite-at-nite
+14 verbose already installed skipping grunt-contrib-compass@~0.5.0 /Users/jake/Sites/lite-at-nite
+15 verbose already installed skipping grunt-contrib-jshint@~0.7.1 /Users/jake/Sites/lite-at-nite
+16 verbose already installed skipping grunt-contrib-clean@~0.5.0 /Users/jake/Sites/lite-at-nite
+17 verbose already installed skipping grunt-shell@~0.5.0 /Users/jake/Sites/lite-at-nite
+18 verbose already installed skipping grunt-notify@~0.2.16 /Users/jake/Sites/lite-at-nite
+19 verbose cache add [ 'load-grunt-tasks@^0.4.0', null ]
+20 verbose cache add name=undefined spec="load-grunt-tasks@^0.4.0" args=["load-grunt-tasks@^0.4.0",null]
+21 verbose parsed url { protocol: null,
+21 verbose parsed url   slashes: null,
+21 verbose parsed url   auth: null,
+21 verbose parsed url   host: null,
+21 verbose parsed url   port: null,
+21 verbose parsed url   hostname: null,
+21 verbose parsed url   hash: null,
+21 verbose parsed url   search: null,
+21 verbose parsed url   query: null,
+21 verbose parsed url   pathname: 'load-grunt-tasks@^0.4.0',
+21 verbose parsed url   path: 'load-grunt-tasks@^0.4.0',
+21 verbose parsed url   href: 'load-grunt-tasks@^0.4.0' }
+22 verbose cache add name="load-grunt-tasks" spec="^0.4.0" args=["load-grunt-tasks","^0.4.0"]
+23 verbose parsed url { protocol: null,
+23 verbose parsed url   slashes: null,
+23 verbose parsed url   auth: null,
+23 verbose parsed url   host: null,
+23 verbose parsed url   port: null,
+23 verbose parsed url   hostname: null,
+23 verbose parsed url   hash: null,
+23 verbose parsed url   search: null,
+23 verbose parsed url   query: null,
+23 verbose parsed url   pathname: '^0.4.0',
+23 verbose parsed url   path: '^0.4.0',
+23 verbose parsed url   href: '^0.4.0' }
+24 verbose addNamed [ 'load-grunt-tasks', '^0.4.0' ]
+25 verbose addNamed [ null, null ]
+26 verbose cache add [ 'grunt-contrib-concat@^0.4.0', null ]
+27 verbose cache add name=undefined spec="grunt-contrib-concat@^0.4.0" args=["grunt-contrib-concat@^0.4.0",null]
+28 verbose parsed url { protocol: null,
+28 verbose parsed url   slashes: null,
+28 verbose parsed url   auth: null,
+28 verbose parsed url   host: null,
+28 verbose parsed url   port: null,
+28 verbose parsed url   hostname: null,
+28 verbose parsed url   hash: null,
+28 verbose parsed url   search: null,
+28 verbose parsed url   query: null,
+28 verbose parsed url   pathname: 'grunt-contrib-concat@^0.4.0',
+28 verbose parsed url   path: 'grunt-contrib-concat@^0.4.0',
+28 verbose parsed url   href: 'grunt-contrib-concat@^0.4.0' }
+29 verbose cache add name="grunt-contrib-concat" spec="^0.4.0" args=["grunt-contrib-concat","^0.4.0"]
+30 verbose parsed url { protocol: null,
+30 verbose parsed url   slashes: null,
+30 verbose parsed url   auth: null,
+30 verbose parsed url   host: null,
+30 verbose parsed url   port: null,
+30 verbose parsed url   hostname: null,
+30 verbose parsed url   hash: null,
+30 verbose parsed url   search: null,
+30 verbose parsed url   query: null,
+30 verbose parsed url   pathname: '^0.4.0',
+30 verbose parsed url   path: '^0.4.0',
+30 verbose parsed url   href: '^0.4.0' }
+31 verbose addNamed [ 'grunt-contrib-concat', '^0.4.0' ]
+32 verbose addNamed [ null, null ]
+33 verbose cache add [ 'grunt-usemin@^2.1.1', null ]
+34 verbose cache add name=undefined spec="grunt-usemin@^2.1.1" args=["grunt-usemin@^2.1.1",null]
+35 verbose parsed url { protocol: null,
+35 verbose parsed url   slashes: null,
+35 verbose parsed url   auth: null,
+35 verbose parsed url   host: null,
+35 verbose parsed url   port: null,
+35 verbose parsed url   hostname: null,
+35 verbose parsed url   hash: null,
+35 verbose parsed url   search: null,
+35 verbose parsed url   query: null,
+35 verbose parsed url   pathname: 'grunt-usemin@^2.1.1',
+35 verbose parsed url   path: 'grunt-usemin@^2.1.1',
+35 verbose parsed url   href: 'grunt-usemin@^2.1.1' }
+36 verbose cache add name="grunt-usemin" spec="^2.1.1" args=["grunt-usemin","^2.1.1"]
+37 verbose parsed url { protocol: null,
+37 verbose parsed url   slashes: null,
+37 verbose parsed url   auth: null,
+37 verbose parsed url   host: null,
+37 verbose parsed url   port: null,
+37 verbose parsed url   hostname: null,
+37 verbose parsed url   hash: null,
+37 verbose parsed url   search: null,
+37 verbose parsed url   query: null,
+37 verbose parsed url   pathname: '^2.1.1',
+37 verbose parsed url   path: '^2.1.1',
+37 verbose parsed url   href: '^2.1.1' }
+38 verbose addNamed [ 'grunt-usemin', '^2.1.1' ]
+39 verbose addNamed [ null, null ]
+40 verbose cache add [ 'gulp-usemin@^0.3.3', null ]
+41 verbose cache add name=undefined spec="gulp-usemin@^0.3.3" args=["gulp-usemin@^0.3.3",null]
+42 verbose parsed url { protocol: null,
+42 verbose parsed url   slashes: null,
+42 verbose parsed url   auth: null,
+42 verbose parsed url   host: null,
+42 verbose parsed url   port: null,
+42 verbose parsed url   hostname: null,
+42 verbose parsed url   hash: null,
+42 verbose parsed url   search: null,
+42 verbose parsed url   query: null,
+42 verbose parsed url   pathname: 'gulp-usemin@^0.3.3',
+42 verbose parsed url   path: 'gulp-usemin@^0.3.3',
+42 verbose parsed url   href: 'gulp-usemin@^0.3.3' }
+43 verbose cache add name="gulp-usemin" spec="^0.3.3" args=["gulp-usemin","^0.3.3"]
+44 verbose parsed url { protocol: null,
+44 verbose parsed url   slashes: null,
+44 verbose parsed url   auth: null,
+44 verbose parsed url   host: null,
+44 verbose parsed url   port: null,
+44 verbose parsed url   hostname: null,
+44 verbose parsed url   hash: null,
+44 verbose parsed url   search: null,
+44 verbose parsed url   query: null,
+44 verbose parsed url   pathname: '^0.3.3',
+44 verbose parsed url   path: '^0.3.3',
+44 verbose parsed url   href: '^0.3.3' }
+45 verbose addNamed [ 'gulp-usemin', '^0.3.3' ]
+46 verbose addNamed [ null, null ]
+47 silly lockFile b8239e6c-load-grunt-tasks-0-4-0 load-grunt-tasks@^0.4.0
+48 verbose lock load-grunt-tasks@^0.4.0 /Users/jake/.npm/b8239e6c-load-grunt-tasks-0-4-0.lock
+49 silly lockFile cce3fe1f-grunt-contrib-concat-0-4-0 grunt-contrib-concat@^0.4.0
+50 verbose lock grunt-contrib-concat@^0.4.0 /Users/jake/.npm/cce3fe1f-grunt-contrib-concat-0-4-0.lock
+51 silly lockFile 831d637e-gulp-usemin-0-3-3 gulp-usemin@^0.3.3
+52 verbose lock gulp-usemin@^0.3.3 /Users/jake/.npm/831d637e-gulp-usemin-0-3-3.lock
+53 silly lockFile 910747d3-grunt-usemin-2-1-1 grunt-usemin@^2.1.1
+54 verbose lock grunt-usemin@^2.1.1 /Users/jake/.npm/910747d3-grunt-usemin-2-1-1.lock
+55 info addNameTag [ 'load-grunt-tasks', '^0.4.0' ]
+56 info addNameTag [ 'grunt-contrib-concat', '^0.4.0' ]
+57 info addNameTag [ 'gulp-usemin', '^0.3.3' ]
+58 info addNameTag [ 'grunt-usemin', '^2.1.1' ]
+59 verbose url raw load-grunt-tasks
+60 verbose url resolving [ 'https://registry.npmjs.org/', './load-grunt-tasks' ]
+61 verbose url resolved https://registry.npmjs.org/load-grunt-tasks
+62 info trying registry request attempt 1 at 10:47:22
+63 verbose etag "BJT49LVT6U3T23X449S8UXJMC"
+64 http GET https://registry.npmjs.org/load-grunt-tasks
+65 verbose url raw grunt-contrib-concat
+66 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-concat' ]
+67 verbose url resolved https://registry.npmjs.org/grunt-contrib-concat
+68 info trying registry request attempt 1 at 10:47:22
+69 verbose etag "7E19CG0XKNCOWXWU8YYQCMI6D"
+70 http GET https://registry.npmjs.org/grunt-contrib-concat
+71 verbose url raw gulp-usemin
+72 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-usemin' ]
+73 verbose url resolved https://registry.npmjs.org/gulp-usemin
+74 info trying registry request attempt 1 at 10:47:22
+75 verbose etag "9XQST03G3HRG8ZB3MGSJHJDW9"
+76 http GET https://registry.npmjs.org/gulp-usemin
+77 verbose url raw grunt-usemin
+78 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-usemin' ]
+79 verbose url resolved https://registry.npmjs.org/grunt-usemin
+80 info trying registry request attempt 1 at 10:47:22
+81 verbose etag "551H4BAJ58TNZ3744EZTREXG2"
+82 http GET https://registry.npmjs.org/grunt-usemin
+83 http 304 https://registry.npmjs.org/grunt-contrib-concat
+84 silly registry.get cb [ 304,
+84 silly registry.get   { date: 'Tue, 29 Apr 2014 09:47:23 GMT',
+84 silly registry.get     server: 'Apache',
+84 silly registry.get     via: '1.1 varnish',
+84 silly registry.get     'last-modified': 'Tue, 29 Apr 2014 09:47:23 GMT',
+84 silly registry.get     'cache-control': 'max-age=1',
+84 silly registry.get     etag: '"7E19CG0XKNCOWXWU8YYQCMI6D"',
+84 silly registry.get     'x-served-by': 'cache-am77-AMS',
+84 silly registry.get     'x-cache': 'HIT',
+84 silly registry.get     'x-cache-hits': '1',
+84 silly registry.get     'x-timer': 'S1398764843.488017321,VS0,VE91',
+84 silly registry.get     vary: 'Accept',
+84 silly registry.get     'content-length': '0',
+84 silly registry.get     'keep-alive': 'timeout=10, max=50',
+84 silly registry.get     connection: 'Keep-Alive' } ]
+85 verbose etag grunt-contrib-concat from cache
+86 http 304 https://registry.npmjs.org/grunt-usemin
+87 silly registry.get cb [ 304,
+87 silly registry.get   { date: 'Tue, 29 Apr 2014 09:47:23 GMT',
+87 silly registry.get     server: 'Apache',
+87 silly registry.get     via: '1.1 varnish',
+87 silly registry.get     'last-modified': 'Tue, 29 Apr 2014 09:47:23 GMT',
+87 silly registry.get     'cache-control': 'max-age=1',
+87 silly registry.get     etag: '"551H4BAJ58TNZ3744EZTREXG2"',
+87 silly registry.get     'x-served-by': 'cache-am69-AMS',
+87 silly registry.get     'x-cache': 'HIT',
+87 silly registry.get     'x-cache-hits': '1',
+87 silly registry.get     'x-timer': 'S1398764843.490836143,VS0,VE92',
+87 silly registry.get     vary: 'Accept',
+87 silly registry.get     'content-length': '0',
+87 silly registry.get     'keep-alive': 'timeout=10, max=50',
+87 silly registry.get     connection: 'Keep-Alive' } ]
+88 verbose etag grunt-usemin from cache
+89 silly lockFile 910747d3-grunt-usemin-2-1-1 grunt-usemin@^2.1.1
+90 silly lockFile 910747d3-grunt-usemin-2-1-1 grunt-usemin@^2.1.1
+91 silly lockFile cce3fe1f-grunt-contrib-concat-0-4-0 grunt-contrib-concat@^0.4.0
+92 silly lockFile cce3fe1f-grunt-contrib-concat-0-4-0 grunt-contrib-concat@^0.4.0
+93 error Error: No compatible version found: grunt-usemin@'^2.1.1'
+93 error Valid install targets:
+93 error ["0.1.0","0.1.1","0.1.2","0.1.5","0.1.6","0.1.7","0.1.8","0.1.9","0.1.4","0.1.10","0.1.11","0.1.12","0.1.13","2.0.0","2.0.1","2.0.2","2.1.0","2.1.1"]
+93 error     at installTargetsError (/usr/local/Cellar/node/0.10.15/lib/node_modules/npm/lib/cache.js:719:10)
+93 error     at /usr/local/Cellar/node/0.10.15/lib/node_modules/npm/lib/cache.js:638:10
+93 error     at saved (/usr/local/Cellar/node/0.10.15/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:142:7)
+93 error     at /usr/local/Cellar/node/0.10.15/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:133:7
+93 error     at Object.oncomplete (fs.js:107:15)
+94 error If you need help, you may report this log at:
+94 error     <http://github.com/isaacs/npm/issues>
+94 error or email it to:
+94 error     <npm-@googlegroups.com>
+95 error System Darwin 13.1.0
+96 error command "/usr/local/Cellar/node/0.10.15/bin/node" "/usr/local/bin/npm" "install"
+97 error cwd /Users/jake/Sites/lite-at-nite
+98 error node -v v0.10.15
+99 error npm -v 1.3.5
+100 verbose exit [ 1, true ]

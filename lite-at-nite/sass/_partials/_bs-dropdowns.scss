@@ -1,0 +1,93 @@
+//
+// Dropdown menus
+// --------------------------------------------------
+
+// The dropdown wrapper (div)
+.dropdown {
+  position: relative;
+
+  .dropdown-title, .dropdown-menu { width: 100%; }
+}
+
+.dropdown-title[class*="btn icon-"]:before {
+  color: $color-red;
+  @include rem(font-size, 20px);
+}
+
+// Prevent the focus on the dropdown toggle when closing dropdowns
+.dropdown-toggle:focus {
+  outline: 0;
+}
+
+// The dropdown menu (ul)
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: $zindex-dropdown;
+  display: none; // none by default, but block on "open" of the menu
+  float: left;
+  min-width: 160px;
+  padding: 0;
+  margin: 0; // override default ul
+  list-style: none;
+  font-size: $font-size-base;
+  background-clip: padding-box;
+}
+
+  // Links within the dropdown menu
+  .dropdown-title, .dropdown-menu > li > a {
+    display: block;
+    @include rem('padding', 10px 20px);
+    clear: both;
+    @include rem(font-size, 20px);
+    font-family: $font-header-bold;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: nowrap; // prevent links from randomly breaking onto new lines
+    background: #333;
+    border-top: 1px solid #444;
+    border-right: 1px solid #444 !important;
+  }
+
+// Hover/Focus state
+.dropdown-menu > li > a {
+  &:hover,
+  &:focus,
+  &.active {
+    background: #444;
+  }
+}
+
+// Active state
+.dropdown-menu > .active > a {
+  &,
+  &:hover,
+  &:focus {
+    background: #444;
+  }
+}
+
+// Open state for the dropdown
+.open {
+  // Show the menu
+  > .dropdown-menu {
+    display: block;
+  }
+
+  // Remove the outline when :focus is triggered
+  > a {
+    outline: 0;
+  }
+}
+
+// Backdrop to catch body clicks on mobile, etc.
+.dropdown-backdrop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: ($zindex-dropdown - 10);
+}
+

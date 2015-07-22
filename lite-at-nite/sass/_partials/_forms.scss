@@ -1,0 +1,490 @@
+.form-control {
+	padding: 12px;
+	height: 44px;
+	border-radius: 0;
+	border: none;		
+}
+::-webkit-input-placeholder { color: #ccc; }
+:-moz-placeholder { color: #ccc; }
+::-moz-placeholder { color: #ccc; }
+:-ms-input-placeholder { color: #ccc; }
+
+.mandatory label:after {
+	content: ' *';
+}
+.input-validation-error {
+	border-color: $color-red !important;
+}
+.field-validation-error {
+	color: $color-red; 
+}
+
+label {
+	font-family: $font-header;
+	@include rem(font-size, 16px);
+}
+
+
+.send {
+	background: url('../images/send-arrow.png') no-repeat 90% 50%;
+}
+
+.popup {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background: rgba(0, 0, 0, 0.7);
+	border: 8px solid #b3b3b3;
+
+	h2, h3, label, p {
+		color: #fff;
+	}
+	h3 {
+		text-align: center;
+	}
+	label {
+		@include rem(font-size, 18px); 
+		font-weight: normal;
+	}
+	.btn { 
+		margin: 15px 0 0 0; 
+	}
+	.btn.btn-inline { 
+		margin: 8px 0 0 0; 
+	}
+}
+
+#cboxLoadedContent {
+	.popup {
+		width: 768px;
+		margin: 0;
+
+		.btn { width: auto; }
+	}	
+}
+
+/*forgot password and login*/
+.admin {
+	max-width: 850px;
+	margin: 50px auto;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	border: 8px solid #b3b3b3;
+	text-align: left;
+
+	h3 {
+		text-align: center;
+		color: #fff;
+		padding-top: 30px;
+	}
+
+	.container-admin {
+		max-width:700px;
+		padding: 0 0 30px 0;
+		margin: 0 auto;
+
+		.cancel-btn {
+			border: none;
+			margin-top: 60px;
+		}
+
+		.btn {
+			margin-top: 30px;
+			padding: 8px 55px 8px 20px;
+		}
+
+		.btn.icon-left{
+				padding-left: 35px;
+			}
+
+		.btn.icon-left:before {
+			left: 0;
+		}
+
+		p {
+			color:#fff;
+			margin-top: 20px;
+		}
+
+	}
+
+	label {
+		color: #fff;
+		font-size: 18px;
+		font-weight: normal;
+	}
+
+	.form-input {
+		border-radius: 0;
+		
+		height: 40px;
+	}
+
+	.admin-input {
+		max-width: 270px;
+		width: 100%;
+
+		a {
+			color: #fff;
+			text-decoration: underline;
+		}
+	}
+	input:invalid {
+		border: 1px solid #ec1c29;
+	}
+}
+
+
+.margin-top-90 {
+	margin-top: 90px;
+}
+
+input:invalid {
+border: 1px solid #ec1c29;
+}
+
+
+/* get in touch form*/
+.get-in-touch {
+
+	.contourPageName {
+		text-align: center;
+	}
+
+	.contourFieldSet {
+		margin: 20px 0 40px 0;
+
+		p {
+			text-align: center;
+			max-width: 610px;
+			margin:0 auto 40px auto;
+			width: 100%
+
+		}
+	}
+
+	.contourField {
+			width: 100%;
+			max-width: 680px;
+			margin:15px auto 0 auto;
+
+			.text {
+				width:100%;
+				max-width: 680px;
+				height:40px;
+				border:1px solid #cccccc;
+			}
+	}
+
+	.contourField.enquiry textarea {
+			width: 100%;
+			max-width: 680px;
+			height: 200px;
+			border: 1px solid #cccccc;
+	}
+
+	.contourNavigation {
+		width: 100%;
+		max-width: 680px;
+		margin: 25px auto 0 auto; 
+
+		.btn {
+			float:right;
+		}
+	}
+
+	input:invalid {
+	  box-shadow: 0 0 5px 1px red;
+	}
+
+	.box-title {
+		border-color: #fff;
+
+		h3, a {
+			@include rem(font-size, 30px);
+		}
+		a { font-family: $font-header-bold; }
+	}
+
+	.box-titles div:last-child .box-title { margin: 0; }
+}
+
+.admin.get-in-touch {
+	.contourPage {
+		margin-bottom: 40px;
+	}
+	.contourPageName {
+		color: #ffffff;
+	}
+
+	.contourFieldSet {
+		p {
+			color: #ffffff;
+		}
+	}
+
+	.contourNavigation {
+		.btn {
+			float:left;
+		}
+	}
+	input:invalid {
+	  box-shadow: 0 0 5px 1px red;
+	}
+}
+
+
+/* Subscribe Form */
+.subscribe {
+
+	h1 {
+		font-size: 7rem;
+		text-align: center;
+	}
+
+	.no-placeholder {
+		display:none;
+	}
+
+	.step {
+		background: $color-red;
+		position:relative;
+		padding:10px 0 10px;
+		display: block;
+		color:$color-white;
+		width:50px;
+		margin: 0 auto 20px;
+		font-size: 20px;
+		font-size: 2rem;
+		text-align: center;
+	}
+
+	fieldset {
+		margin: 30px 0;
+	}
+	.mod-subscribe-details {
+
+		input{
+			max-width: 430px;
+			margin:0 auto 10px;
+			display: block;
+			width: 100%;
+			padding: 10px 20px;
+		}
+		
+		.form-row{
+			max-width: 430px;
+			margin: 0 auto;
+			}
+		}
+
+		.mod-subscribe-services {
+			text-align: left;
+			margin-bottom:20px;
+
+			@media(min-width:$screen-sm){
+				.subscribe-checkboxes{
+					display: table;
+					width:100%;
+					background: #fff;
+
+					.subscribe-checkboxes-col {
+						display: table-cell;
+						width: 33%;
+						padding:15px 20px;
+						background:$color-white;
+							background:rgba($color-white,1);
+						@media (min-width: $screen-sm){
+							background:$color-white;
+							background:rgba($color-white,1);
+						}
+					}
+				}
+			}
+
+			label{
+				display: block;
+				font-weight: normal;
+				text-align: left;
+				@include clearfix();
+
+				span{ overflow:hidden; display:block; vertical-align:top; }
+
+				input{
+					margin-right:10px;
+					margin-bottom:10px;
+					float:left;
+					clear: both;
+				}
+				input:invalid {
+				  box-shadow: 0 0 5px 1px red;
+				}
+			}
+		}
+		@media(max-width:$screen-sm){
+			.subscribe-checkboxes {
+				background: $color-white;
+				background: rgba($color-white,1);
+				padding: 10px;
+			}
+		}
+
+
+	.mod-subscription-miniForm{
+		.h1{
+			float: left;
+			margin-bottom:10px;
+			@media (min-width:$screen-md) {
+					margin-right: 30px;
+					margin-bottom: 0;
+				}
+		}
+
+		.form{
+			float: left;
+		}
+
+		.inputAndBtn{
+			margin-top: 4px;
+		}
+	}
+	.send {
+		float:right;
+	}
+}
+
+
+/* Team Relay form */
+
+.team-relay {
+	border-bottom: 3px solid #ccc;
+
+	.container { 
+		position: relative;
+	}
+
+	.row { 
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.form-control {
+		border: 1px solid #cccccc;
+	}
+
+	.radio-list-title {
+		margin-bottom: 8px;
+	}
+
+	.terms-link {
+		display: inline-block;
+		padding: 0 0 0 20px;
+	}
+
+	i {
+		position: absolute;
+		margin: 10px 0 0 -80px;
+		@include rem(font-size, 60px); 
+		color: $color-red; 
+	}
+}
+
+
+/* 479px and down */
+@media (max-width: $screen-xs-custom-max) { }
+
+/* 480px and up */
+@media (min-width: $screen-xs-custom-min) { }
+
+/* 599px and down */
+@media (max-width: $screen-xsm-custom-max) { }
+
+/* 600px and up */
+@media (min-width: $screen-xsm-custom-min) { }
+
+/* 767px and down */
+@media (max-width: $screen-sm-custom-max) {  
+	.popup {
+		.btn { 
+			float: right;
+		}
+		.btn.btn-inline { 
+			float: left;
+		}
+	}
+
+		.admin a.btn.icon-right {
+			margin-top: 30px;
+		}
+
+		.admin .admin-input {
+			float: left;
+			margin-top: 10px;
+		}
+		.admin a.btn.icon-right {
+			float:left;
+		}
+
+	.team-relay {
+
+		.row { 
+		    margin-bottom: 0;
+		    margin-top: 15px;
+   		}
+		.form-control, .radio-list-wrap, .btn { margin-bottom: 15px; }
+		i { display:none; }
+	}
+
+}
+
+
+/* 768px and up */
+@media (min-width: $screen-sm-min) { 
+	.popup {
+		.btn { 
+			margin: 31px 0 0 0; 
+			min-width: inherit;
+		}
+	}
+
+	.get-in-touch .box-title {
+		margin: 0;
+		h3, a {
+			@include rem(font-size, 35px);
+		}
+	}
+}
+
+/* 768px - 991px */
+@media (min-width: $screen-sm-custom-min) and (max-width: $screen-md-custom-max) { 
+	.team-relay {
+		.container {
+			width: 705px;
+			margin-left: 104px;
+		}
+	}
+}
+
+/* 992px and up */
+@media (min-width: $screen-md-custom-min) { 
+	.get-in-touch .box-title {
+		h3, a {
+			@include rem(font-size, 40px);
+		}
+	}
+	
+}
+
+/* 992px and down */
+@media (max-width: $screen-md-custom-min) {  
+	.subscribe h1 {
+			font-size: 6rem;
+			text-shadow:1px 1px 1px rgba(0,0,0,0.4);
+			text-align: center;
+		} 
+}
+
+/* 992px - 1999px */
+@media (min-width: $screen-md-custom-min) and (max-width: $screen-lg-custom-max) {  }
+
+/* 1200px and up */
+@media (min-width: $screen-lg-custom-min) { }

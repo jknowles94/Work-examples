@@ -1,0 +1,183 @@
+// ----- Variables -----
+// Custom breakpoint variables
+$screen-xs-custom:            480px !default;
+$screen-xs-custom-min:        $screen-xs-custom !default;
+$screen-xs-custom-max:        ($screen-xs-custom-min - 1) !default;
+
+$screen-xsm-custom:           600px !default;
+$screen-xsm-custom-min:       $screen-xsm-custom !default;
+$screen-xsm-custom-max:       ($screen-xsm-custom-min - 1) !default;
+
+$screen-sm-custom:            768px !default;
+$screen-sm-custom-min:        $screen-sm-custom !default;
+$screen-sm-custom-max:        ($screen-sm-custom-min - 1) !default;
+
+$screen-md-custom:            992px !default;
+$screen-md-custom-min:        $screen-md-custom !default;
+$screen-md-custom-max:        ($screen-md-custom-min - 1) !default;
+
+$screen-lg-custom:            1200px !default;
+$screen-lg-custom-min:        $screen-lg-custom !default;
+$screen-lg-custom-max:        ($screen-lg-custom-min - 1) !default;
+
+
+// grid
+$grid-gutter-width: 30px;
+
+// Container sizes
+// --------------------------------------------------
+
+// Small screen / tablet
+$container-tablet:             ((726px + $grid-gutter-width));
+
+// Medium screen / desktop
+$container-desktop:            ((962px + $grid-gutter-width));
+
+// Large screen / wide desktop
+$container-large-desktop:      ((1200px));
+
+
+//no gutter
+.row-gutter-none{
+	@include make-row();
+	margin-left:0;
+	margin-right:0;
+
+	*[class*='col-']{
+		padding-left:0;
+		padding-right:0;
+	}
+}
+
+
+
+// Fonts
+$arial: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$font-header: "Trade Gothic W01 Cn 18", "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+$font-header-bold: "TradeGothicW01-BoldCn20 675334", "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+$font-paragraph:"Proxima N W01 Reg", serif;
+$font-paragraph-bold:"Proxima N W01 Bold", serif;
+
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/fontello.eot?28733069');
+  src: url('../fonts/fontello.eot?28733069#iefix') format('embedded-opentype'),
+       url('../fonts/fontello.woff?28733069') format('woff'),
+       url('../fonts/fontello.ttf?28733069') format('truetype'),
+       url('../fonts/fontello.svg?28733069#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"]:before, [class*=" icon-"]:before {
+	font-family: "fontello";
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	text-align: center;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1em;
+}
+
+.icon-list-spaced:before { content: '\e811'; } /* '' */
+.icon-instagram:before { content: '\e807'; } /* '' */
+.icon-scissors:before { content: '\e813'; } /* '' */
+.icon-up:before { content: '\e801'; } /* '' */
+.icon-swimming:before { content: '\e806'; } /* '' */
+.icon-running:before { content: '\e808'; } /* '' */
+.icon-right:before { content: '\e809'; } /* '' */
+.icon-right-lg:before { content: '\e80d'; } /* '' */
+.icon-left:before { content: '\e80e'; } /* '' */
+.icon-left-lg:before { content: '\e814'; } /* '' */
+.icon-down:before { content: '\e815'; } /* '' */
+.icon-cycling:before { content: '\e816'; } /* '' */
+.icon-walking:before { content: '\e80f'; } /* '' */
+.icon-marker:before { content: '\e810'; } /* '' */
+.icon-plus:before { content: '\e817'; } /* '' */
+.icon-megaphone:before { content: '\e812'; } /* '' */
+.icon-doubledown:before { content: '\e80a'; } /* '' */
+.icon-doubleup:before { content: '\e80b'; } /* '' */
+.icon-carouselmarker:before { content: '\e81e'; } /* '' */
+.icon-phone:before { content: '\e819'; } /* '' */
+.icon-gplus:before { content: '\e802'; } /* '' */
+.icon-down-dir:before { content: '\e81d'; } /* '' */
+.icon-left-dir:before { content: '\e81c'; } /* '' */
+.icon-right-dir:before { content: '\e81b'; } /* '' */
+.icon-up-dir:before { content: '\e81a'; } /* '' */
+.icon-location:before { content: '\e80c'; } /* '' */
+.icon-embassy:before { content: '\e803'; } /* '' */
+.icon-youtube:before { content: '\e800'; } /* '' */
+.icon-facebook:before { content: '\e804'; } /* '' */
+.icon-twitter-bird:before { content: '\e805'; } /* '' */
+.icon-minus:before { content: '\e818'; } /* '' */
+
+
+// Colours
+$color-black: #000;
+$color-white: #fff;
+$color-grey-medium-lighter: #b3b3b3;
+$color-grey-medium-light: #999;
+$color-grey-medium: #333;
+$color-grey-dark: #1a1a1a;
+$color-yellow: #fef8a6;
+
+
+
+$color-grey-lighter: #f1f1f1;
+$color-grey-light: #ccc;
+$color-red: #ed1c29;
+$color-red-light: #fd424e;
+
+$color-facebook: #0071bc;
+$color-twitter: #29abe2;
+$color-instagram: #998575;
+$color-youtube: #ed3437;
+
+
+
+
+// ----- Mixins -----
+// REM  mixin - http://hugogiraudel.com/2013/03/18/ultimate-rem-mixin/
+@function parseInt($n) { 
+  @return $n / ($n * 0 + 1);
+}
+
+@mixin rem($property, $values) {
+	$px : (); 
+	$rem: (); 
+
+	@each $value in $values { 
+
+		@if $value == 0 or $value == auto { 
+			$px : append($px , $value);
+			$rem: append($rem, $value);
+		}
+
+		@else { 
+			$unit: unit($value);   
+			$val: parseInt($value); 
+		  
+		  @if $unit == "px" {  
+			$px : append($px,  $value);
+			$rem: append($rem, ($val / 10 + rem));
+		  }
+		  
+		  @if $unit == "rem" { 
+			$px : append($px,  ($val * 10 + px));
+			$rem: append($rem, $value);
+		  }
+		}
+	}
+
+	@if $px == $rem {     
+		#{$property}: $px;  
+	} @else {
+		#{$property}: $px;  
+		#{$property}: $rem;
+	}
+}

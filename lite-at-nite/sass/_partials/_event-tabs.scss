@@ -1,0 +1,147 @@
+.nav-tabs {
+	width:100%;
+
+	li {
+		margin: 0;
+		text-align:center;
+		background: #000;
+		border-left: 1px solid #fff;
+
+		&.active {
+			background:$color-red;
+		}
+
+		&:first-child {
+			border-left:none;
+		}
+
+		a {
+			width: 100%;
+			padding:20px 0; 
+			color: #fff;
+			outline: none;
+		}
+	}
+}
+
+.tab-content {
+	clear:both;
+	> .tab-pane {
+		display: none;
+	}
+	> .active {
+		display: block;
+	}
+}
+
+.map-container {
+	position: relative;
+	background-size:cover;
+	background-position:center center;
+}
+	#googleMap {
+		min-height:520px;
+	}
+
+	.event-details {
+		clear:both;
+		overflow:hidden;
+		background: rgba(0,0,0, 0.7);
+		position:absolute;
+		bottom:0;
+		width:100%;
+		padding:10px 0;
+		
+		li {
+			float:left;
+			border-left:2px solid $color-red;
+			padding:0 15px;
+			color:$color-white;
+			text-transform:uppercase;
+			font-family:$font-header;
+			@include rem(font-size, 24px);
+
+			&:first-child {
+				border-left:0;
+			}
+		}
+	}
+
+.event-content {
+	padding: 30px 0;
+
+	h3 {
+		color:$color-red;
+		@include rem(font-size, 24px);
+	}
+	p {
+		color:$color-grey-medium-light;
+	}
+	.h4, address .icon-phone {
+		color:$color-black;
+	}
+
+	.h4 {
+		display: block;
+	}
+
+	address {
+		margin-bottom:10px;
+		padding:5px 20px 10px 25px;
+		display:block;
+		border-bottom:1px solid #ccc;
+		font-family:$font-header;
+		color:$color-grey-medium-light;
+		@include rem(font-size, 16px);
+
+		.icon-phone {
+			margin-left:-25px;
+			margin-right:5px;
+		}
+	}
+}
+
+
+/* 767px and down */
+@media (max-width: $screen-sm-custom-max) {  
+
+	.nav-tabs {
+		li {
+			width: 100%;
+			border-bottom: 1px solid #fff;
+			border-left: none;
+		}
+	}
+
+	.event-details {
+		margin:0 auto;
+		text-align: center;
+		
+		li {
+			display: inline-block;
+			float:none;
+			@include rem(font-size, 18px);
+		}
+	}
+
+	.event-content {
+		p {
+			padding-bottom:20px;
+		}
+	}
+
+}
+
+@media (min-width: $screen-sm-min) { 
+	.triathlon { margin-bottom: 30px; }
+}
+
+/* 992px and down */
+@media (max-width: $screen-md-custom-max) {
+	.event-content {
+		img {
+			margin:0 auto 20px;
+		}
+	}
+
+}
