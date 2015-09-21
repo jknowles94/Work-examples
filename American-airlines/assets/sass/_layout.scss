@@ -1,0 +1,271 @@
+// ----- Layout -----
+
+// Custom containers and columns
+.fullwidth, .fullwidth-sm, .fullwidth-lg, .fullwidth-np, .fullwidth-bg {
+	width: 100%;
+	@include clearfix();
+	clear: both;
+}
+.fullwidth-lg {
+	padding-top: 45px;
+	padding-bottom: 45px;
+}
+.fullwidth {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.fullwidth-sm {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.fullwidth-bg, .fullwidth-np {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.fullwidth-bg {
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+	.col-np {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.col-lp {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+
+// Background colours/patterns
+.bg-grey {
+	background-color: $color-grey-light;
+}
+.bg-black {
+	color: #fff;
+	background-color: #000;
+
+	a { color: #fff; }
+}
+
+
+// General panel styling
+.panel-title, .panel-intro, .panel-outro { text-align: center; }
+.panel-intro { @include rem(margin-bottom, 45px); }
+.panel-outro { @include rem(margin-top, 45px); }
+
+.text-block {
+	padding: 15px;
+	background-color: #fff;
+}
+
+
+
+// ----- Header -----
+.header {
+    background-color: #000;
+}
+
+.logo {
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+
+}
+
+.img-responsive {
+	margin:0px auto;
+}
+
+.tscs {
+	text-align:center;
+	max-width:600px;
+	width:100%;
+	margin:0 auto;
+}
+
+.has-error {
+	color:#ca082e;
+
+	.form-control {
+		border-color: #ca082e;
+	}
+
+	.form-control-feedback {
+		color:#ca082e;
+	}
+
+	.help-block {
+		color:#ca082e;
+		display:none!important;
+	}
+}
+
+.help-block {
+	color:#ca082e;
+
+}
+
+.has-error input.form-control::-webkit-input-placeholder {
+	color: #ca082e;
+}
+
+.has-error input.form-control:-moz-placeholder {
+	color: #ca082e;
+}
+
+.has-error input.form-control::-moz-placeholder {
+	color: #ca082e;
+}
+
+.has-error input.form-control:-ms-input-placeholder {
+	color: #ca082e;
+}
+
+.placeholder { color: #fff; }
+
+.form-guest {
+	max-width:530px;
+	width:100%;
+	margin:0 auto;
+
+	input {
+		background:transparent;
+		border: 1px solid #fff;
+		color: #fff;
+		border-radius:10px;
+	}
+
+	input::-webkit-input-placeholder {
+	   color: #fff;
+	}
+
+	input:-moz-placeholder { /* Firefox 18- */
+	   color: #fff; 
+	}
+
+	input::-moz-placeholder {  /* Firefox 19+ */
+	   color: #fff;  
+	}
+
+	input:-ms-input-placeholder {  
+	   color: #fff;  
+	}
+
+	> .help-block {
+		text-align: center;
+	}
+}
+
+input[type="checkbox"] {
+	display:none;
+}
+
+input[type="checkbox"] + label {
+    display:inline-block;
+    width:18px;
+    height:20px;
+    // margin:-5px 15px 0 -29px;
+    vertical-align:middle;
+    background:url(../images/checkbox-sprite.jpg) left top no-repeat;
+    cursor:pointer;
+    margin-bottom: 5px;
+}
+
+input[type="checkbox"]:checked + label {
+	display:inline-block;
+    // margin:-5px 15px 0 -29px;
+    margin-bottom: 5px;
+    width:24px;
+    height:20px;
+    vertical-align: middle;
+    background:url(../images/checkbox-sprite.jpg) -23px top no-repeat;
+    cursor:pointer;
+}
+
+
+.red-line {
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+.thank-you {
+	text-align:center;
+
+	h1 {
+		color:#ca082e;
+	}
+}
+
+.mandontory {
+	margin-bottom:0;
+}
+
+
+
+// ----- XS - 479px and down -----
+@media (max-width: $screen-xs-custom-max) {  
+	.img-responsive {
+		margin:0px auto;
+	}
+}
+
+// 480px and up
+@media (min-width: $screen-xs-custom-min) {  
+
+}
+
+// 599px and down
+@media (max-width: $screen-xsm-custom-max) {  
+
+}
+
+// 600px and up
+@media (min-width: $screen-xsm-custom-min) {  
+
+}
+
+// 767px and down
+@media (max-width: $screen-sm-custom-max) { 
+
+}
+
+
+// ----- SM - 768px and up ----- 
+@media (min-width: $screen-sm-min) { 
+	.nav-mobile-toggle {
+		display: none;
+	}
+}
+
+// 768px - 991px
+@media (min-width: $screen-sm-custom-min) and (max-width: $screen-md-custom-max) { 
+
+}
+
+// 991px and down
+@media (max-width: $screen-md-custom-max) {  
+
+}
+
+
+// ----- MD - 992px and up  -----
+@media (min-width: $screen-md-custom-min) {  
+
+}
+
+// 992px - 1999px
+@media (min-width: $screen-md-custom-min) and (max-width: $screen-lg-custom-max) {  
+
+}
+
+
+// ----- LG - 1200px and up -----
+@media (min-width: $screen-lg-custom-min) { 
+	.red-line {
+		left:10%;
+	}
+}
