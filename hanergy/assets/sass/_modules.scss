@@ -1,0 +1,268 @@
+// ----- Modules -----
+//larger-images and conatainers
+.large-img {
+	display:none;
+
+	img {
+		width: 100%;
+	}
+}
+
+.pop-up-img, .pop-up-text {
+	width:50%;
+	float:left;
+}
+
+.pop-up-text {
+	padding:30px;
+}
+
+.large-img-container {
+	padding: 4% 7% 4% 7%;
+	float: none;
+	width: 100%;
+	color:#173b48;
+
+	&.text-left {
+		padding: 7% 4% 7% 4%
+	}
+
+	h2 {
+		text-transform:uppercase;
+		color:#173b48;
+	}
+
+	p {
+		line-height: 25px;
+	}
+
+	> div {
+		margin-bottom: 50px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+
+}
+
+.system {
+
+	padding:60px 0;
+
+	h2 {
+		line-height: 35px;
+	}
+}
+
+.ikea-img {
+	width:50%;
+	float:left;
+
+	img {
+		width: 100%;
+	}
+}
+
+.ikea-container {
+	width:50%;
+	float:left;
+	padding:30px 70px 0 70px;
+
+	h1 {
+		@include rem(font-size, 32px);
+		color:#222222;
+	}
+
+	img {
+		margin-bottom: 20px;
+	}
+}
+
+.hero-item {
+
+	color:#fff;
+	max-width:500px;
+	display:block;
+	margin:170px auto 0;
+
+	h1 {
+		text-transform: uppercase;
+		@include rem(font-size, 99px);
+		font-weight: bold;
+		margin-bottom: 25px;
+
+		span {
+			color: #ffcf2b
+		}
+	}
+
+	p {
+		@include rem(font-size, 29px);
+		font-weight: 600;
+		line-height: 40px;
+	}
+}
+
+// ----- Sample module -----
+.grid {
+
+&.fullwidth { padding-bottom: 0; }
+
+	.item {
+		padding: 15px;
+		margin-bottom: 30px;
+		background: #fff;
+
+		> img:first-child, > .overlay-wrap:first-child {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+/* ----- XS ----- */
+/* 479px and down */
+@media (max-width: $screen-xs-custom-max) {  
+	.hero-item {
+
+		h1 {
+			@include rem(font-size, 69px);
+		}
+	}
+
+	.header-img {
+		height: 600px;
+	}
+}
+
+/* 480px and up */
+@media (min-width: $screen-xs-custom-min) {  
+
+}
+
+/* 599px and down */
+@media (max-width: $screen-xsm-custom-max) {  
+	.offer {
+		display:none;
+	}
+
+	.system {
+		padding: 30px 0;
+	}
+}
+
+/* 600px and up */
+@media (min-width: $screen-xsm-custom-min) {  
+
+}
+
+/* 767px and down */
+@media (max-width: $screen-sm-custom-max) { 
+
+}
+
+
+/* ----- SM ----- */
+/* 768px and up */
+@media (min-width: $screen-sm-min) { 
+// ----- Sample flexbox module - Keeps the grid cards an equal height -----
+	.flexbox .grid .row, .row-flex {
+		display: flex;
+		flex-wrap: wrap;
+
+		> div[class*='col-'] {
+			display: flex;
+			flex: 0 1 auto;
+			margin: -0.2px; // Fixes chrome bug
+		}
+
+			.item {
+				max-width: 100%;
+			}
+	}
+}
+
+/* 768px - 991px */
+@media (min-width: $screen-sm-custom-min) and (max-width: $screen-md-custom-max) { 
+
+}
+
+/* 991px and down */
+@media (max-width: $screen-md-custom-max) {  
+	.ikea-img {
+		width:100%;
+
+	}
+
+	.ikea-container {
+		width:100%;
+		padding-bottom:60px;
+	}
+}
+
+
+/* ----- MD ----- */
+/* 992px and up */
+@media (min-width: $screen-md-custom-min) {  
+
+}
+
+/* 992px - 1999px */
+@media (min-width: $screen-md-custom-min) and (max-width: $screen-lg-custom-max) {  
+
+}
+
+@media (min-width: 1100px) {
+	.large-img-container {
+		float:left;
+		width:50%;
+		padding: 2% 5% 0 5%;
+
+		&.text-left {
+			padding: 7% 0 0 13%
+		}
+	}
+
+	.large-img {
+		width: 38%;
+		float: left;
+		display: block;
+
+		img {
+			width: 100%;
+		}
+	}
+}
+/* ----- LG ----- */
+/* 1200px and up */
+@media (min-width: $screen-lg-custom-min) { 
+	.large-img-container {
+		float:left;
+		width:50%;
+		padding: 5% 7% 0 7%;
+
+		&.text-left {
+			padding: 7% 0 0 13%
+		}
+	}
+
+	.large-img {
+		width: 38%;
+		float: left;
+		display: block;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.ikea-container {
+		width:50%;
+		float:left;
+		padding:60px 70px 0 70px;
+	}
+}
+
+
+

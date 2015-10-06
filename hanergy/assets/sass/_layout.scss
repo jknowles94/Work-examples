@@ -1,0 +1,340 @@
+// ----- Layout -----
+
+// Custom containers and columns
+.fullwidth, .fullwidth-sm, .fullwidth-lg, .fullwidth-np, .fullwidth-bg {
+	width: 100%;
+	@include clearfix();
+	clear: both;
+}
+.fullwidth-lg {
+	padding-top: 45px;
+	padding-bottom: 45px;
+}
+.fullwidth {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.fullwidth-sm {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.fullwidth-bg, .fullwidth-np {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.fullwidth-bg {
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+	.col-np {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.col-lp {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+.line-divider {
+		margin:25px 0;
+		width: 60px;
+		height: 2px;
+		background:#173b48;
+	}
+
+// Background colours/patterns
+.bg-red {
+	background-color: $color-bg-red;
+	text-align:center;
+	color:#fff;
+	padding:90px 0;
+}
+
+.regular-income {
+
+	h1 {
+		text-transform: uppercase;
+		font-weight: 600;
+		margin-bottom: 40px;
+		line-height: 83px;
+		margin-top: 0;
+	}
+
+	.row {
+		margin: 30px 0;
+
+		p {
+			padding:0 20px;
+		}
+	}
+
+	img {
+		margin: 25px 0;
+	}
+}
+
+.bg-green {
+	background-color: $color-bg-green;
+	color:#fff;
+	padding:90px 0;
+
+	.last-child {
+		color:#478755;
+	}
+}
+
+.bg-system {
+	background:url('../images/system-bg.jpg') no-repeat;
+	background-size:cover;
+	height:720px;
+}
+
+.sb-slidebar {
+	color:#fff;
+
+	nav {
+		margin: 20px 0;
+	}
+
+	ul {
+		li {
+			display:block;
+			width: 100%;
+			padding: 15px 20px;
+			text-transform: uppercase;
+
+			a {
+				color: #fff;
+
+				&:hover {
+					color:#c71f18;
+				}
+			}
+
+			.sb-close {
+				font-size: 25px;
+				position: absolute;
+			    right: 20px;
+			    top: 7px;
+			}
+		}
+	}
+}
+
+
+// General panel styling
+.panel-title, .panel-intro, .panel-outro { text-align: center; }
+.panel-intro { @include rem(margin-bottom, 45px); }
+.panel-outro { @include rem(margin-top, 45px); }
+
+.text-block {
+	padding: 15px;
+	background-color: #fff;
+}
+
+.semi-bold {
+	font-weight:600;
+}
+
+// ----- Header -----
+.header {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    z-index: 9999;
+}
+	.logo {
+		float: left;
+		margin: 10px 0;
+	}
+	
+	.nav-toggle {
+		color: #fff;
+		float: left;
+		padding: 10px 40px 0 10px;
+		@include rem(font-size, 25px);
+
+		&:hover, &:focus, {
+			color:#c71f18;
+		}
+	}
+
+	.offer {
+		float: right;
+		background:#c71f18;
+		width: 81px;
+		margin-top: -15px;
+		text-align: center;
+		color: #fff;
+		position: relative;
+		padding:5px 0;
+
+		img {
+			position: absolute;
+			left: 0;
+			bottom: -34px;
+		}
+
+		a {
+			text-decoration: underline;
+			color:#fff;
+		}
+	}
+
+
+// Header image
+.header-img {
+	background:url('../images/hero-background.jpg') no-repeat;
+	background-size:cover;
+	height: 720px;
+	width:100%;
+	text-align: center;
+
+	.hero-item {
+		
+	}
+}
+
+
+
+// ----- Cookie -----
+// .cookie {
+// 	display: none; 
+// 	text-align: left;
+// 	@include rem(font-size, 14px); 
+// 	background: $color-grey-medium;
+
+// 	.container {
+// 		position: relative;
+// 		padding-right: 45px;
+// 	}
+// 		.cookie-text {
+// 			float: left;
+// 			margin-right: 10px;
+// 			margin-bottom: 4px;
+// 		}
+// 			.btn { 
+// 				float: left; 
+// 			}
+// 			.cookie-close { 
+// 				position: absolute;
+// 				right: 15px;
+// 				@include rem(font-size, 32px); 
+// 			}
+// }
+// .cookie.active { display: block; }
+
+
+
+// ----- Footer -----
+.footer {
+	@include rem(font-size, 12px);
+	background:$color-grey-dark;
+	padding-bottom:40px;
+	text-align:center;
+	color:#bababa;
+
+	.footer-light {
+		background: $color-grey-light;
+		padding: 20px 0;
+
+		img {
+			padding:0 5px 5px;
+		}
+
+		h3 {
+			@include rem(font-size, 20px);
+			color: #000;
+		}
+
+		a {
+			text-decoration: underline;
+			color:#bababa;
+		}
+	}
+
+	ul {
+		li {
+			display: inline-block;
+			color:#bababa;
+		}
+	}
+}
+
+
+
+/* ----- XS ----- */
+/* 479px and down */
+@media (max-width: $screen-xs-custom-max) {  
+
+}
+
+/* 480px and up */
+@media (min-width: $screen-xs-custom-min) {  
+
+}
+
+/* 599px and down */
+@media (max-width: $screen-xsm-custom-max) {  
+
+}
+
+/* 600px and up */
+@media (min-width: $screen-xsm-custom-min) {  
+
+}
+
+/* 767px and down */
+@media (max-width: $screen-sm-custom-max) { 
+	.bg-system {
+		background:#fff;
+		height:100%;
+	}
+	.bg-red {
+
+		h1 {
+			line-height: 50px;
+		}
+
+	}
+}
+
+
+/* ----- SM ----- */
+/* 768px and up */
+@media (min-width: $screen-sm-min) { 
+	.nav-mobile-toggle {
+		display: none;
+	}
+}
+
+/* 768px - 991px */
+@media (min-width: $screen-sm-custom-min) and (max-width: $screen-md-custom-max) { 
+
+}
+
+/* 991px and down */
+@media (max-width: $screen-md-custom-max) {  
+
+}
+
+
+/* ----- MD ----- */
+/* 992px and up */
+@media (min-width: $screen-md-custom-min) {  
+
+}
+
+/* 992px - 1999px */
+@media (min-width: $screen-md-custom-min) and (max-width: $screen-lg-custom-max) {  
+
+}
+
+
+/* ----- LG ----- */
+/* 1200px and up */
+@media (min-width: $screen-lg-custom-min) { 
+
+}
