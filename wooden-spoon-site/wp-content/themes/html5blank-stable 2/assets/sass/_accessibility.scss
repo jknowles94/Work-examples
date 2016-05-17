@@ -1,0 +1,65 @@
+// contrast remove 
+
+// .toggle-contrast {
+// 	display:none!important;
+// }
+
+
+// Accessibility styling
+
+.a11y-toolbar ul li button {
+	background:#009d57;
+	border:0;
+	color:#fff!important;
+
+	&:hover {
+		background: #009d57;
+	}
+}
+
+.a11y-toolbar.rtl, .a11y-toolbar.right {
+	top:87%;
+}
+
+.a11y-toolbar ul li button.active {
+	background:#009d57;
+	border:0;
+	color:#fff!important;
+
+	&:hover {
+		background: #009d57;
+	}
+}
+
+html.fontsize {
+	.side-nav {
+		display:none;
+	}
+
+	.main-content {
+		width: 100%;
+	}
+
+	.nav-mobile-toggle {
+		display: block;
+	}
+
+	.header-nav {
+		display: none;
+	}
+
+	.subscribe {
+		.btn-subscribe {
+			height: 48px;
+		}
+	}
+
+	.cycle-prev, .cycle-next {
+		height: 90px;
+		width: 70px;
+	}
+
+	.footer {
+		@include rem(font-size, 11px);
+	}
+}

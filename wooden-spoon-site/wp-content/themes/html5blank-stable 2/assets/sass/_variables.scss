@@ -1,0 +1,139 @@
+// ----- Variables -----
+// Custom breakpoint variables
+$screen-xs-custom:            480px !default;
+$screen-xs-custom-min:        $screen-xs-custom !default;
+$screen-xs-custom-max:        ($screen-xs-custom-min - 1) !default;
+
+$screen-xsm-custom:           600px !default;
+$screen-xsm-custom-min:       $screen-xsm-custom !default;
+$screen-xsm-custom-max:       ($screen-xsm-custom-min - 1) !default;
+
+$screen-sm-custom:            769px !default;
+$screen-sm-custom-min:        $screen-sm-custom !default;
+$screen-sm-custom-max:        ($screen-sm-custom-min - 1) !default;
+
+$screen-md-custom:            992px !default;
+$screen-md-custom-min:        $screen-md-custom !default;
+$screen-md-custom-max:        ($screen-md-custom-min - 1) !default;
+
+$screen-lg-custom:            1200px !default;
+$screen-lg-custom-min:        $screen-lg-custom !default;
+$screen-lg-custom-max:        ($screen-lg-custom-min - 1) !default;
+
+
+// ----- Variables -----
+
+// Custom breakpoint variables
+$screen-xs-custom:			480px !default;
+$screen-xs-custom-min:		$screen-xs-custom !default;
+$screen-xs-custom-max:		($screen-xs-custom-min - 1) !default;
+
+$screen-xsm-custom:			600px !default;
+$screen-xsm-custom-min:		$screen-xsm-custom !default;
+$screen-xsm-custom-max:		($screen-xsm-custom-min - 1) !default;
+
+$screen-sm-custom:			769px !default;
+$screen-sm-custom-min:		$screen-sm-custom !default;
+$screen-sm-custom-max:		($screen-sm-custom-min - 1) !default;
+
+$screen-md-custom:			992px !default;
+$screen-md-custom-min:		$screen-md-custom !default;
+$screen-md-custom-max:		($screen-md-custom-min - 1) !default;
+
+$screen-lg-custom:			1200px !default;
+$screen-lg-custom-min:		$screen-lg-custom !default;
+$screen-lg-custom-max:		($screen-lg-custom-min - 1) !default;
+
+
+// Colours
+$color-red:					#d51e49;
+$color-red-hover:			#e7587a;
+$color-grey-dark: 			#333; 
+$color-grey-medium-dark: 	#666; 
+$color-grey-medium: 		#3f4041; 
+$color-grey-medium-light: 	#aaa; 
+$color-grey-light: 			#ddd; 
+
+$color-facebook: 			#0071bc;
+$color-twitter: 			#29abe2;
+$color-instagram: 			#998575;
+$color-youtube: 			#ed3437;
+
+
+// Fonts
+$font-regular:				'Roboto Slab', serif;
+$font-heading:				'Oswald', sans-serif;
+
+@font-face {
+	@include webfont('fontello', 'fontello', 'assets/fonts/', '56542287');
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="icon-"]:before, [class*=" icon-"]:before, .icon-inline-right:after {
+	font-family: "fontello";
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	text-align: center;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-plus:before { content: '\e800'; } /* '' */
+.icon-minus:before { content: '\e801'; } /* '' */
+.icon-chevron-up:before { content: '\e802'; } /* '' */
+.icon-chevron-down:before { content: '\e803'; } /* '' */
+.icon-chevron-left:before { content: '\e804'; } /* '' */
+.icon-chevron-right:before { content: '\e805'; } /* '' */
+.icon-navicon:before { content: '\e806'; } /* '' */
+.icon-location:before { content: '\e807'; } /* '' */
+.icon-calendar-empty:before { content: '\e808'; } /* '' */
+.icon-down-dir:before { content: '\e809'; } /* '' */
+.icon-up-dir:before { content: '\e80a'; } /* '' */
+.icon-left-dir:before { content: '\e80b'; } /* '' */
+.icon-right-dir:before { content: '\e80c'; } /* '' */
+.icon-facebook:before { content: '\e80d'; } /* '' */
+.icon-gplus:before { content: '\e80e'; } /* '' */
+.icon-linkedin:before { content: '\e80f'; } /* '' */
+.icon-twitter:before { content: '\e810'; } /* '' */
+.icon-youtube:before { content: '\e811'; } /* '' */
+.icon-search:before { content: '\e812'; } /* '' */
+.icon-instagram:before { content: '\e813'; } /* '' */
+.icon-ok:before { content: '\e814'; } /* '' */
+.icon-cancel:before { content: '\e815'; } /* '' */
+.icon-arrow-left:before { content: '\e816'; } /* '' */
+.icon-arrow-down:before { content: '\e817'; } /* '' */
+.icon-nos-04:before { content: '\e818'; } /* '' */
+.icon-nos-01:before { content: '\e819'; } /* '' */
+.icon-nos-02:before { content: '\e81a'; } /* '' */
+.icon-nos-03:before { content: '\e81b'; } /* '' */
+.icon-right-open:before { content: '\e81d'; } /* '' */
+.icon-chevron-right:before, .icon-chevron-right.icon-inline-right:after { content: '\e805'; } /* '' */
+
+.icon-inline-right {
+	padding-right: 1.5em;
+	
+	&:before { display: none; }
+	&:after { 
+		width: 1.5em; 
+		margin-right: -1.5em; 
+		text-align: right;
+	}
+}
+
+.icon-inline-left {
+	display: inline-block;
+	padding-left: 1.5em;
+	
+	&:before { 
+		width: 1.5em; 
+		margin-left: -1.5em;
+		text-align: left;
+	}
+}

@@ -1,0 +1,875 @@
+// ----- Modules -----
+//Home-nav
+
+.home-nav {
+	position: relative;
+	top:-100px;
+	z-index: 99999;
+}
+
+.nav-grid {
+	display:flex;
+	flex-wrap: wrap;
+    align-items: stretch;
+
+    .grid-item {
+    	width: 50%;
+    	background-repeat: no-repeat;
+	    background-size: cover;
+	    background-position: 0 50%;
+    	min-height: 300px;
+    	
+    	
+    	div {
+	    	background: rgba(213,30,73,0);
+	    	transition: all 300ms;
+	    	height: 300px;
+	    	width: 100%;
+	    	padding: 30px;
+	    	display: flex;
+    		align-items: flex-end;
+	    	transition: all 300ms;
+    	}
+
+    	&:nth-child(4n), &:nth-child(4n+1) {
+    		width: 50%;
+    	}
+
+    	h1 {
+    		color: #fff;
+    		text-shadow: 1px 1px 16px #333;
+    	}
+
+    	&:hover div {
+    		background: rgba(213,30,73,0.6);
+    	}
+    }
+}
+
+//Event grid dropdown
+
+.event-grid {
+	position: relative;
+	padding:0;
+	list-style-type: none;
+	display:flex;
+	flex-wrap:wrap;
+	align-content:stretch;
+
+	.grid-item {
+		width: 50%;
+		min-height: 300px;
+		background-repeat: no-repeat;
+	    background-size: cover;
+	    background-position: 50%;
+	    display: inline-block;
+	    padding:0;
+	    margin:0;
+	    overflow: hidden;
+
+	    .hover-state {
+	    	background: rgba(213,30,73,0);
+	    	transition: all 300ms;
+	    	height: 300px;
+	    	width: 100%;
+	    	padding: 30px;
+	    	display: flex;
+	    	flex-direction: column;
+	    	transition: all 300ms;
+	    	justify-content: flex-end;
+	    	text-align:left;
+    	}
+
+    	.img-background {
+		    position: absolute;
+		    padding: 0;
+		    top: 0;
+		    height: 300px;
+		    overflow: hidden;
+		    width: auto;
+		    z-index: -999;
+    	}
+
+    	&:hover .hover-state, &:active .hover-state  {
+    		background: rgba(213,30,73,0.6);
+    	}
+
+    	h3 {
+    		color: #fff;
+    		transition: all 300ms;
+
+    	}
+
+    	&:hover h3, &:active h3  {
+    		opacity: 1;
+    	}
+
+    	h1 {
+    		color: $color-red;
+    		padding:0 40px 0 20px;
+    	}
+
+    	p {
+    		color: #333;
+    	}
+
+	}
+}
+
+.og-grid li.og-expanded > a::after {
+	display: none;
+}
+
+.og-expander {
+	background:transparent;
+}
+
+.og-details p {
+	@include rem(font-size, 14px);
+	line-height:1.2;
+	font-weight:normal;
+	color:#333;
+}
+
+.og-details li {
+	height: auto;
+	display:list-item;
+	margin: 0 0 10px 0;
+}
+
+.og-details a {
+	color: $color-red;
+	text-transform:none;
+	font-weight:bold;
+	text-decoration:underline;
+	padding:0;
+	font-size:inherit;
+	margin:0;
+	border:0;
+
+	&:hover {
+		color: $color-red-hover;
+	}
+
+	&:before {
+		content: "";
+		margin-right: 0;
+	}
+}
+
+.og-fullimg, .og-details {
+	height: auto;
+}
+
+// Profile Tabs
+
+.profile-grid {
+	position: relative;
+	padding:0;
+	list-style-type: none;
+	display:flex;
+	flex-wrap:wrap;
+	align-content:stretch;
+
+	.grid-item {
+		width: 33.33%;
+		display: inline-block;
+		padding:0;
+		margin:0;
+		overflow: hidden;
+		height: auto;
+
+		.img-background {
+		    padding: 0;
+		    width: 100%;
+
+		    img {
+		    	width: 100%;
+		    }
+    	}
+
+    	.profile-name {
+    		width: 100%;
+    		padding:25px 0;
+    		background:$color-red;
+    		text-align: center;
+
+    		p {
+    			color:#fff;
+    			margin:0;
+    			font-weight: bold;
+    			@include rem(font-size, 16px);
+    		}
+    	}
+
+    	&.og-expanded > a:after {
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 35px 9vw 0 9.5vw;
+			border-color: $color-red transparent transparent transparent;
+			display: block;
+			margin:0;
+			left: 0;
+		}
+	}
+
+	.og-fullimg {
+		display: none;
+	}
+
+	.og-details {
+		width: 100%;
+		padding: 0;
+	}
+
+	h1 {
+		@include rem(font-size, 18px);
+	}
+}
+
+// Region Tabs
+
+.region-tab {
+	.nav-tabs {
+		margin:20px 0 0 0;
+
+		> li {
+			width: 33.33%
+		}
+	}	
+}
+
+.marauder-tab {
+	.nav-tabs {
+		margin:20px 0 0 0;
+
+		> li {
+			width: 50%
+		}
+	}
+}
+
+.project, .fundraise, .sm-gallery {
+	width:100%;
+	position: relative;
+
+	img {
+		width: 100%;
+	}
+
+	.item {
+		max-height: 750px;
+		overflow: hidden;
+
+		.header-text {
+			color:#fff;
+			display: block;
+			position: absolute;
+			bottom:0;
+			background: rgba(0,0,0,0.6);
+    		padding: 20px 30px;
+    		width: 100%;
+		}
+	}
+	
+	.linebreak{
+		background: #fff;
+	    height: 1px;
+	    width: 200px;
+	    display: inline-block;
+	    margin: 15px 0;
+	}
+}
+
+.fundraise .item {
+	max-height:500px;
+}
+
+.sm-gallery {
+	width:100%;
+
+	.item {
+		max-height: 300px;
+	}
+}
+
+.project {
+	height:750px;
+}
+
+
+// News grid
+
+.news-grid {
+	display:flex;
+	flex-wrap: wrap;
+    align-items: stretch;
+
+    .grid-item {
+    	width: 50%;
+    	background-repeat: no-repeat;
+	    background-size: cover;
+	    background-position: 50%;
+    	min-height: 300px;
+    	
+    	
+    	div {
+	    	background: rgba(213,30,73,0);
+	    	transition: all 300ms;
+	    	height: 300px;
+	    	width: 100%;
+	    	padding: 30px;
+	    	display: flex;
+	    	flex-direction: column;
+	    	transition: all 300ms;
+	    	justify-content: flex-start;
+
+	    	&.nav-fix {
+	    		justify-content: flex-end;
+	    	}
+    	}
+
+    	&:hover div {
+    		background: rgba(213,30,73,0.6);
+    	}
+
+    	h3 {
+    		color: #fff;
+    		text-shadow: 1px 1px 16px #333;
+    	}
+
+    	.date {
+    		font-weight: bold;
+    		color: #fff;
+    		margin-top: auto;
+    		margin-bottom: 5px;
+    	}
+    }
+}
+
+// Map
+
+	.jvectormap-container {
+	    width: 100%;
+	    height:100%;
+	}
+
+	.jvectormap-tip {
+	    position: absolute;
+	    display: none;
+	    border: solid 1px #CDCDCD;
+	    border-radius: 3px;
+	    background: #292929;
+	    color: white;
+	    padding: 3px;
+	    z-index: 999;
+	}
+
+	.region {
+
+		&.hover {
+			a {
+				color:$color-red;
+			}
+		}
+
+		&.filterin {
+			// background-color: $color-red;
+
+			// a {
+			// 	color:#fff;
+			// }
+
+			a {
+				&:hover {
+					color: $color-red;
+				}
+			}
+			
+		}
+
+		&.filterout {
+			a {
+				color:#e6e6e6; 
+			}
+		}
+
+	}
+
+	#filter-button {
+		display: inline-block;
+		@include rem(font-size, 20px);
+		@include rem('padding', 15px 10px);
+	}
+
+	.jvectormap-zoomin {
+		position: absolute;
+		top: 5px;
+		left: 40px;
+		@include rem(font-size, 22px);
+		color:$color-red;
+	}
+
+	.jvectormap-zoomout {
+		position: absolute;
+		top: 5px;
+		left: 20px;
+		@include rem(font-size, 22px);
+		color:$color-red;
+	}
+
+
+// Contact Form
+
+.form-body {
+	background:#eaeaea;
+	@include rem('padding', 20px);
+}
+
+
+.form-control {
+	border-radius:0;
+}
+
+.recaptcha-wrapper {
+	margin: 15px 0;
+
+	&:before, &:after {
+		content: " ";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+.recaptcha {
+	float:right;
+}
+
+.regionID {
+	display:none;
+}
+
+span.wpcf7-list-item {
+	margin:0;
+}
+
+input[type="checkbox"] {
+	margin-left:5px;
+}
+
+//donate form
+
+.form-donate {
+	label {
+		font-weight: normal;
+	}
+
+	select {
+		border-radius: 0;
+	    width: 150px;
+	    margin-left: 5px;
+	}
+
+	#title {
+		width: auto;
+		margin-left: 0;
+	}
+
+	.form-body {
+		margin-bottom: 15px;
+	}
+
+	.checkbox {
+		margin-top: 0;
+		position: static;
+
+		span {
+			margin-left: 5px;
+		}
+	}
+
+	input[type="date"] {
+		text-transform:uppercase;
+		padding:0 5px;
+	}
+
+	&.details {
+		label {
+			width: 20%;
+		}
+
+		input {
+			width:40%;
+		}
+
+		.checkbox {
+			margin-left: 20px;
+
+			input {
+				width: auto;
+			}
+
+			span {
+				margin:0;
+			}
+		}
+	}
+}
+
+#btnSubmit {
+	margin:0;
+}
+
+.thank-title {
+	color:$color-red;
+	@include rem(font-size, 21px);
+}
+
+.linebreak{
+	background: #333;
+    height: 1px;
+    width: 200px;
+    display: inline-block;
+    margin: 25px 0;
+}
+
+#donationAmountSelectContainer,
+#donationAmountInputContainer {
+	display: inline-block;
+	padding-left: 9px;
+}
+#donationAmountInput {
+	margin-left: 5px;
+}
+#comments {
+	width: 100%;
+	height: 150px;
+}
+.error.form-body {
+    background-color: #D51E49;
+    color: white;
+  }
+.checkbox label {
+	padding-left: 0px !important;
+}
+
+.form-pagination {
+	float:right;
+
+	span {
+		margin:0 10px;
+
+		&.active {
+			font-weight: bold;
+			i {
+				color:$color-red;
+			}
+		}
+	}
+
+	i {
+		@include rem(font-size, 21px);
+	}
+}
+
+//Pagination News
+
+.pagination {
+	width:100%;
+	display:flex;
+	padding:20px 0;
+
+	> div {
+		height: 200px;
+	}
+
+	.home {
+		flex-grow: 2;
+		background: $color-red;
+		color:#fff;
+		text-align: center;
+		display: flex;
+	    align-items: center;
+	    justify-content: center;
+	}
+
+	.next, .previous {
+		width: 25%;
+		padding: 20px;
+		background-position: 50%;
+
+		p {
+			@include rem(font-size, 16px);
+			font-weight: bold;
+			text-transform:uppercase;
+			text-shadow: 1px 1px 16px #333;
+		}
+
+		span {
+			@include rem(font-size, 16px);
+			text-shadow: 1px 1px 16px #333;
+		}
+	}
+
+	a {
+		color:#fff;
+	}
+}
+
+
+//Filter 
+.usfbtn {
+	background:$color-red;
+	color:#fff;
+	@include rem('padding', 10px 20px);
+	font-weight: bold; 
+    text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	border:0;
+	margin: 0;
+    display: block;
+	transition: all 250ms;
+
+	&:hover {
+		background: $color-red-hover;
+	}
+}
+
+#uwpqsf_id {
+	border:0;
+}
+
+.uform_title {
+	display:none;
+}
+
+.uwpqsf_class {
+	width:150px;
+	margin-right:15px;
+	display:inline-block;
+}
+
+#tax-select-1 {
+	display:none;
+}
+
+// ----- Sample module -----
+.grid {
+
+&.fullwidth { padding-bottom: 0; }
+
+	.item {
+		padding: 15px;
+		margin-bottom: 30px;
+		background: #fff;
+
+		> img:first-child, > .overlay-wrap:first-child {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+
+// ----- XS - 479px and down -----
+@media (max-width: $screen-xs-custom-max) {  
+	.subscribe {
+		padding: 0;
+		width: 100%;
+
+		.form-subscribe {
+			width: 100%;
+			.form-control {
+				width: 80%;
+			}
+		}
+	}
+
+	.has-feedback label ~ .form-control-feedback {
+		top:20px;
+	}
+
+	.form-donate.details label {
+		width: 100%;
+	}
+}
+
+// 480px and up
+@media (min-width: $screen-xs-custom-min) {  
+
+}
+
+// 599px and down
+@media (max-width: $screen-xsm-custom-max) {  
+	.nav-grid, .news-grid, .event-grid, .profile-grid {
+
+	    .grid-item {
+	    	width: 100%;
+
+	    	&:nth-child(4n), &:nth-child(4n+1) {
+	    		width: 100%;
+	    	}
+	    }
+	}
+
+	.profile-grid .grid-item.og-expanded > a:after {
+		border-width: 35px 50vw 0 48vw;
+	}
+
+}
+
+// 600px and up
+@media (min-width: $screen-xsm-custom-min) {  
+
+}
+
+//600px - 767px
+
+@media (min-width: $screen-xsm-custom-min) and (max-width: $screen-sm-min) {  
+	.profile-grid .grid-item.og-expanded > a:after {
+		border-width: 35px 17vw 0 16vw;
+	}
+}
+
+// 768px and down
+@media (max-width: $screen-sm-min) { 
+	.home-nav {
+		top:0;
+	}
+
+	.og-details {
+		padding: 10px 0;
+	}
+
+	.event-grid .grid-item h1 {
+		padding:0;
+	}
+
+	// .profile-grid .grid-item.og-expanded > a:after {
+	// 	border-width: 35px 17vw 0 15.5vw;
+	// }
+
+	.pagination {
+		display: block;	
+
+		> div, > a, .next, .previous {
+			width: 100%;
+		}
+	}
+
+	.form-donate {
+
+		&.details {
+			label {
+				display: block;
+			}
+
+			input {
+				width:100%;
+				display: block;
+			}
+		}
+	}
+
+	.nav-grid .grid-item {
+		background-position: 50%;
+	}
+
+	.news-grid .grid-item {
+		background-position:50%;
+	}
+}
+
+
+// ----- SM - 769px and up ----- 
+@media (min-width: $screen-sm-custom) { 
+// ----- Sample flexbox module - Keeps the grid cards an equal height -----
+	.flexbox .grid .row, .row-flex {
+		display: flex;
+		flex-wrap: wrap;
+
+		> div[class*='col-'] {
+			display: flex;
+			flex: 0 1 auto;
+			margin: -0.2px; // Fixes chrome bug
+		}
+
+			.item {
+				max-width: 100%;
+			}
+	}
+
+	.nav-grid, .news-grid, .event-grid {
+
+	    .grid-item {
+	    	width: 33.33%;
+	    }
+	}
+
+	.profile-grid {
+		.grid-item {
+			width: 25%;
+		}
+	}
+
+	.nav-grid{
+
+		.grid-item {
+			&:nth-child(4n), &:nth-child(4n+1) {
+	    		width: 66.66%;
+	    	}
+	    }
+    }
+
+    .sm-gallery {
+    	width: 66.66%;
+    }
+}
+
+// 768px - 991px
+@media (min-width: $screen-sm-custom-min) and (max-width: $screen-md-custom-max) { 
+	.pagination {
+
+		> div, .next, .previous {
+			width: 33.33%;
+		}
+	}
+}
+
+// 991px and down
+@media (max-width: $screen-md-custom-max) {  
+	.og-fullimg, .og-details {
+		width: 100%;
+		display: block;
+		height: auto;
+	}
+
+	#map-container {
+		margin: 20px 0;
+	}
+
+	.pagination .home {
+		flex-grow:1;
+	}
+}
+
+
+// ----- MD - 992px and up  -----
+@media (min-width: $screen-md-custom-min) {  
+
+}
+
+// 992px - 1999px
+@media (min-width: $screen-md-custom-min) and (max-width: $screen-lg-custom-max) {  
+
+}
+
+
+// ----- LG - 1200px and up -----
+@media (min-width: $screen-lg-custom-min) { 
+
+}

@@ -1,0 +1,299 @@
+// ----- Basic styles -----
+
+// Text styles
+body {
+	font-family: $font-regular;
+	@include rem(font-size, 16px);
+	color: $color-grey-dark;
+	background: #fff;
+	line-height:1.4;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 { 	
+	@include rem(margin-top, 10px);
+	@include rem(margin-bottom, 15px);
+	font-family: $font-heading;
+	text-transform:uppercase;
+	font-weight:bold;
+	small, .small { }
+} 
+
+h1, .h1, h2, .h2 { 
+
+}
+
+iframe {
+	display:block;
+	margin:0 auto;
+	width:100%!important;
+	max-width:900px;
+}
+
+h3, .h3, h3, .h3, h4, .h4, h5, .h5 { 
+	@include rem(margin-bottom, 10px);
+}
+
+h1, .h1 { @include rem(font-size, 40px); }
+h2, .h2 { @include rem(font-size, 30px); }
+h3, .h3 { @include rem(font-size, 24px); } 
+h4, .h4 { @include rem(font-size, 18px); }
+h5, .h5 { @include rem(font-size, 12px); }
+
+.text-lg { @include rem(font-size, 24px); } 
+.text-md { @include rem(font-size, 18px); }
+.text-sm { @include rem(font-size, 12px); }
+
+
+p, ul, ol { @include rem(margin, 0 0 20px 0); }
+ul, ol {
+	@include rem(padding, 0 0 0 25px);
+
+	li { @include rem(padding, 0 0 0 5px); }
+	ul, ol { margin-bottom: 0; }
+}
+
+ul, ol, ul li, ol li {
+
+}
+
+
+// Links and Nav
+a {
+	color:$color-red;
+	transition: color 300ms;
+
+	&:hover {
+		color:$color-red-hover;
+		text-decoration: none;
+	}
+
+	&:focus {
+		text-decoration: none;
+	}
+}
+
+nav, nav ul, nav li, nav a { float: left; margin: 0; padding: 0; }
+nav ul { list-style: none; list-style-image: none; }
+	nav li { }
+		nav a { }
+
+.nav-inline {
+	display: inline-block;
+	float: none;
+
+	ul, li, a { 
+		display: inline-block;
+		float: none;
+	}
+}
+
+.nav-social {
+	a {
+		opacity: .9;
+		transition: all 250ms;
+
+		&:hover { opacity: 1; }
+	}
+
+	.facebook { background: $color-facebook; }
+	.twitter { background: $color-twitter; }
+	.instagram { background: $color-instagram; }
+	.youtube { background: $color-youtube; }
+}
+
+
+// Buttons
+.btn { 
+	display: block;
+	@include rem('padding', 15px 0);
+	@include rem(font-size, 38px);
+	color: $color-red;
+	font-weight: bold; 
+    text-align: center;
+	text-transform: uppercase;
+	vertical-align: middle;
+	background: transparent;
+ 	cursor: pointer;
+ 	font-family: $font-heading;
+
+ 	transition: all 250ms;
+}
+    .btn:hover, a:hover .btn {
+    	color: $color-red-hover;
+    }
+
+.btn-group {
+	text-align: center;
+
+    .btn { 
+    	margin: 0 10px 15px 10px; 
+    }
+}
+
+.btn-submit {
+	background:$color-red;
+	color:#fff;
+	@include rem('padding', 15px 30px);
+	font-weight: bold; 
+    text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	border:0;
+	margin: 0 0 0 auto;
+    display: block;
+	transition: all 250ms;
+
+	&:hover {
+		background: $color-red-hover;
+	}
+}
+
+.contact-btn {
+	position: absolute;
+	right:7%;
+	top:20%;
+	@include rem('padding', 7px 20px);
+	background: #2fad75;
+
+	a {
+		color:#fff;
+		font-weight: bold;
+	}
+}
+
+
+// Image groups
+.img-group {
+	img {
+		margin-bottom: 30px;
+	}
+	img:last-child {
+		margin-bottom: 0;
+	}
+}
+
+
+// Sliders
+.cycle-slideshow { 
+	position: relative;
+
+	.cycle-slide { width: 100%; }
+	.item { display: none; }
+	.item-first { display: block; }
+ }
+ 
+.cycle-carousel {
+	.cycle-slide { width: auto; }
+	img { width: auto; height: auto; }
+}
+
+	.cycle-prev, .cycle-next { 
+		@include align-center();
+		position: absolute;
+		color: #bcbdc0;
+		@include rem(font-size, 40px);
+		cursor: pointer;
+		z-index: 1000;
+		width: 44px;
+	    background: white;
+	    height: 57px;
+	}
+	.cycle-prev:hover, .cycle-next:hover { 
+		color: $color-grey-medium;
+	}
+	.cycle-prev { left: 0; }
+	.cycle-next { right: 0; }
+
+	.cycle-pager span:hover, .cycle-pager .cycle-pager-active { color: $color-grey-medium; }
+
+
+// Overlays an item over another
+.overlay-wrap {
+	position: relative;
+	display: inline-block;
+	max-width: 100%;
+}
+	.overlay, .overlay-full {
+		position: absolute;
+		margin: 0;
+	}
+	.overlay-full {
+		width: 100%;
+		height: 100%;
+	}
+		.overlay-text {
+			@include align-center();
+		}
+
+
+
+// ----- XS - 479px and down -----
+@media (max-width: $screen-xs-custom-max) {  
+
+}
+
+// 480px and up
+@media (min-width: $screen-xs-custom-min) {  
+
+}
+
+// 599px and down
+@media (max-width: $screen-xsm-custom-max) {  
+
+}
+
+// 600px and up
+@media (min-width: $screen-xsm-custom-min) {  
+
+}
+
+// 767px and down
+@media (max-width: $screen-sm-custom-max) { 
+	html {
+		font-size: 9px;
+	}
+}
+
+
+// ----- SM - 768px and up ----- 
+@media (min-width: $screen-sm-min) { 
+	h1, .h1 { @include rem(font-size, 48px); }
+	h2, .h2 { @include rem(font-size, 36px); }
+	h3, .h3 { @include rem(font-size, 30px); } 
+	h4, .h4 { @include rem(font-size, 24px); }
+	h5, .h5 { @include rem(font-size, 18px); }
+
+	.text-lg { @include rem(font-size, 30px); } 
+	.text-md { @include rem(font-size, 24px); }
+	.text-sm { @include rem(font-size, 12px); }
+
+}
+
+// 768px - 991px
+@media (min-width: $screen-sm-custom-min) and (max-width: $screen-md-custom-max) { 
+
+}
+
+// 991px and down
+@media (max-width: $screen-md-custom-max) {  
+
+}
+
+
+// ----- MD - 992px and up  -----
+@media (min-width: $screen-md-custom-min) {  
+
+}
+
+// 992px - 1999px
+@media (min-width: $screen-md-custom-min) and (max-width: $screen-lg-custom-max) {  
+
+}
+
+
+// ----- LG - 1200px and up -----
+@media (min-width: $screen-lg-custom-min) { 
+
+}
