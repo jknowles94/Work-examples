@@ -4,4 +4,6 @@ Additional live examples of work
 - http://amigopartnership.com/
 - http://roundhouse.com/
 - http://trentxwb.rolls-roycepilotguide.com/
-- https://woodenspoon.org.uk/
+- http://woodenspoon.org.uk/
+- http://paidpost.ft.com/bp/
+- http://paidpost.ft.com/fitted/
